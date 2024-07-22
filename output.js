@@ -1,4 +1,4 @@
-//Mon Jul 22 2024 13:13:57 GMT+0000 (Coordinated Universal Time)
+//Mon Jul 22 2024 13:37:25 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 const _0x5f00b5 = _0x5b30bc("太平通"),
@@ -23,6 +23,18 @@ const _0x44a3a3 = {
   width: 375
 };
 function _0x50719f() {
+  const _0x44f0de = {
+    AabEe: function (_0x28154d, _0x3c66cb) {
+      return _0x28154d * _0x3c66cb;
+    }
+  };
+  _0x44f0de.AabEe = function (_0x28154d, _0x3c66cb) {
+    return _0x28154d * _0x3c66cb;
+  };
+  _0x44f0de.VlhTV = function (_0x418fb5, _0x28d580) {
+    return _0x418fb5 ^ _0x28d580;
+  };
+  const _0x15e30d = _0x44f0de;
   if (!_0x560acf) {
     let _0x8aa8ec = 0,
       _0x2d1177 = _0x28b094.match(/.{1,4}/g);
@@ -30,9 +42,9 @@ function _0x50719f() {
       let _0xda0854 = _0x4c11b3.split("").map(_0x4cca8b => _0x4cca8b.charCodeAt(0)).reverse(),
         _0x54eb62 = 0;
       for (let _0x5c66e0 = 0; _0x5c66e0 < _0xda0854.length; _0x5c66e0++) {
-        _0x54eb62 |= _0xda0854[_0x5c66e0] << 8 * _0x5c66e0;
+        _0x54eb62 |= _0xda0854[_0x5c66e0] << _0x15e30d.AabEe(8, _0x5c66e0);
       }
-      _0x8aa8ec = _0x8aa8ec ^ _0x54eb62;
+      _0x8aa8ec = _0x15e30d.VlhTV(_0x8aa8ec, _0x54eb62);
     }
     _0x560acf = _0x8aa8ec.toString(16);
   }
@@ -233,13 +245,15 @@ class _0x15ca64 extends _0x31446a {
         thirdAccount: this.token,
         registerData: {}
       };
-      let _0x59d8d9 = {
-          fn: "registerAndLogin",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/tptplaybox/api/account/registerAndLogin",
-          headers: _0x13160c,
-          json: _0x1ff688
-        },
+      const _0xb9c058 = {
+        fn: "registerAndLogin"
+      };
+      _0xb9c058.fn = "registerAndLogin";
+      _0xb9c058.method = "post";
+      _0xb9c058.url = "https://ecustomer.cntaiping.com/tptplaybox/api/account/registerAndLogin";
+      _0xb9c058.headers = _0x13160c;
+      _0xb9c058.json = _0x1ff688;
+      let _0x59d8d9 = _0xb9c058,
         {
           result: _0x73d9c7,
           statusCode: _0x6a973c
@@ -271,12 +285,14 @@ class _0x15ca64 extends _0x31446a {
   async couponAndsign(_0x4bb256 = {}) {
     let _0x1d9fe4 = false;
     try {
-      let _0x548018 = {
-          fn: "couponAndsign",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/campaignsms/couponAndsign",
-          json: {}
-        },
+      const _0x20e30b = {
+        fn: "couponAndsign"
+      };
+      _0x20e30b.fn = "couponAndsign";
+      _0x20e30b.method = "post";
+      _0x20e30b.url = "https://ecustomer.cntaiping.com/campaignsms/couponAndsign";
+      _0x20e30b.json = {};
+      let _0x548018 = _0x20e30b,
         {
           result: _0x3c246c,
           statusCode: _0x44012b
@@ -310,10 +326,12 @@ class _0x15ca64 extends _0x31446a {
     try {
       const _0x2eb699 = {
         fn: "get_task_list",
-        method: "post",
-        url: "https://ecustomer.cntaiping.com/campaignsms/goldParty/task/list",
-        json: {}
+        method: "post"
       };
+      _0x2eb699.fn = "get_task_list";
+      _0x2eb699.method = "post";
+      _0x2eb699.url = "https://ecustomer.cntaiping.com/campaignsms/goldParty/task/list";
+      _0x2eb699.json = {};
       _0x2eb699.json.activityNumber = "goldCoinParty";
       _0x2eb699.json.rewardFlag = "1";
       _0x2eb699.json.openMsgRemind = 0;
@@ -362,12 +380,16 @@ class _0x15ca64 extends _0x31446a {
       const _0x4b103c = {
         taskIds: [_0x45e5b5.taskId]
       };
-      let _0x145efe = {
-          fn: "task_finish",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/campaignsms/goldParty/task/finish",
-          json: _0x4b103c
-        },
+      const _0x2ff1c7 = {
+        fn: "task_finish",
+        method: "post",
+        url: "https://ecustomer.cntaiping.com/campaignsms/goldParty/task/finish"
+      };
+      _0x2ff1c7.fn = "task_finish";
+      _0x2ff1c7.method = "post";
+      _0x2ff1c7.url = "https://ecustomer.cntaiping.com/campaignsms/goldParty/task/finish";
+      _0x2ff1c7.json = _0x4b103c;
+      let _0x145efe = _0x2ff1c7,
         {
           result: _0x3b2243,
           statusCode: _0x3dd2e4
@@ -388,12 +410,16 @@ class _0x15ca64 extends _0x31446a {
       const _0x390c39 = {
         taskIds: [_0x3fa219.taskId]
       };
-      let _0x952542 = {
-          fn: "goldCoin_add",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/campaignsms/goldParty/goldCoin/add",
-          json: _0x390c39
-        },
+      const _0x42495d = {
+        fn: "goldCoin_add",
+        method: "post",
+        url: "https://ecustomer.cntaiping.com/campaignsms/goldParty/goldCoin/add"
+      };
+      _0x42495d.fn = "goldCoin_add";
+      _0x42495d.method = "post";
+      _0x42495d.url = "https://ecustomer.cntaiping.com/campaignsms/goldParty/goldCoin/add";
+      _0x42495d.json = _0x390c39;
+      let _0x952542 = _0x42495d,
         {
           result: _0x440715,
           statusCode: _0x1491f6
@@ -414,11 +440,12 @@ class _0x15ca64 extends _0x31446a {
     try {
       let _0x4d74ff = _0x5f00b5.randomList(_0x437263);
       const _0x24007b = {
-        fn: "get_articles",
-        method: "post",
-        url: "https://ecustomer.cntaiping.com/informationms/app/config/get/" + _0x23d679,
-        json: {}
+        fn: "get_articles"
       };
+      _0x24007b.fn = "get_articles";
+      _0x24007b.method = "post";
+      _0x24007b.url = "https://ecustomer.cntaiping.com/informationms/app/config/get/" + _0x23d679;
+      _0x24007b.json = {};
       _0x24007b.json.channelId = _0x4d74ff;
       _0x24007b.json.pageSize = 10;
       _0x24007b.json.city = "1";
@@ -503,12 +530,14 @@ class _0x15ca64 extends _0x31446a {
         articleId: _0x29a9ef,
         source: _0xd896c2
       };
-      let _0x158316 = {
-          fn: "read_gold",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/informationms/app/v2/read/gold",
-          json: _0x14a8f1
-        },
+      const _0x5820e9 = {
+        fn: "read_gold"
+      };
+      _0x5820e9.fn = "read_gold";
+      _0x5820e9.method = "post";
+      _0x5820e9.url = "https://ecustomer.cntaiping.com/informationms/app/v2/read/gold";
+      _0x5820e9.json = _0x14a8f1;
+      let _0x158316 = _0x5820e9,
         {
           result: _0x5d3219,
           statusCode: _0x398d20
@@ -525,19 +554,33 @@ class _0x15ca64 extends _0x31446a {
     }
   }
   async queryList(_0x2a7fd2 = {}) {
+    const _0x3320dd = {
+      eoaax: "queryList",
+      ReHLG: "post"
+    };
+    _0x3320dd.eoaax = "queryList";
+    _0x3320dd.ReHLG = "post";
+    _0x3320dd.NGSjR = "code";
+    _0x3320dd.jbaFd = function (_0x691510, _0x59b569) {
+      return _0x691510 == _0x59b569;
+    };
+    _0x3320dd.JQhYs = "0000";
+    const _0x5cb0f7 = _0x3320dd;
     try {
-      let _0x196b6b = {
-          fn: "queryList",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/campaignsms/coinBubble/queryList",
-          json: {}
-        },
+      const _0x189f6d = {
+        fn: _0x5cb0f7.eoaax
+      };
+      _0x189f6d.fn = _0x5cb0f7.eoaax;
+      _0x189f6d.method = _0x5cb0f7.ReHLG;
+      _0x189f6d.url = "https://ecustomer.cntaiping.com/campaignsms/coinBubble/queryList";
+      _0x189f6d.json = {};
+      let _0x196b6b = _0x189f6d,
         {
           result: _0x4c70ca,
           statusCode: _0x46c58c
         } = await this.request(_0x196b6b),
-        _0x2724b2 = _0x5f00b5.get(_0x4c70ca, "code", _0x46c58c);
-      if (_0x2724b2 == "0000") {
+        _0x2724b2 = _0x5f00b5.get(_0x4c70ca, _0x5cb0f7.NGSjR, _0x46c58c);
+      if (_0x5cb0f7.jbaFd(_0x2724b2, _0x5cb0f7.JQhYs)) {
         let _0x17e543 = _0x4c70ca?.["data"]?.["length"] || 0;
         this.log("有" + _0x17e543 + "个可领取的气泡奖励");
         _0x17e543 && (await this.getAllCoins());
@@ -551,12 +594,14 @@ class _0x15ca64 extends _0x31446a {
   }
   async getAllCoins(_0x43262c = {}) {
     try {
-      let _0x56f719 = {
-          fn: "getAllCoins",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/campaignsms/coinBubble/getAllCoins",
-          json: {}
-        },
+      const _0x35e3fe = {
+        fn: "getAllCoins"
+      };
+      _0x35e3fe.fn = "getAllCoins";
+      _0x35e3fe.method = "post";
+      _0x35e3fe.url = "https://ecustomer.cntaiping.com/campaignsms/coinBubble/getAllCoins";
+      _0x35e3fe.json = {};
+      let _0x56f719 = _0x35e3fe,
         {
           result: _0x365acb,
           statusCode: _0x22f529
@@ -580,12 +625,15 @@ class _0x15ca64 extends _0x31446a {
         pageNo: _0x4247cb,
         pageSize: _0x3290ef
       };
-      let _0x45bff1 = {
-          fn: "exhibitionTopic",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/campaignsms/tPkTopicAppointment/exhibitionTopic",
-          json: _0x10c7cb
-        },
+      const _0x1d2e3c = {
+        fn: "exhibitionTopic",
+        method: "post"
+      };
+      _0x1d2e3c.fn = "exhibitionTopic";
+      _0x1d2e3c.method = "post";
+      _0x1d2e3c.url = "https://ecustomer.cntaiping.com/campaignsms/tPkTopicAppointment/exhibitionTopic";
+      _0x1d2e3c.json = _0x10c7cb;
+      let _0x45bff1 = _0x1d2e3c,
         {
           result: _0x292f72,
           statusCode: _0x605076
@@ -610,12 +658,14 @@ class _0x15ca64 extends _0x31446a {
         id: _0x212283.id,
         dataFrom: 0
       };
-      let _0x261d3c = {
-          fn: "standInLineTopic",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/campaignsms/tPkTopicAppointment/standInLineTopic",
-          json: _0x31cb0e
-        },
+      const _0x2dfae9 = {
+        fn: "standInLineTopic"
+      };
+      _0x2dfae9.fn = "standInLineTopic";
+      _0x2dfae9.method = "post";
+      _0x2dfae9.url = "https://ecustomer.cntaiping.com/campaignsms/tPkTopicAppointment/standInLineTopic";
+      _0x2dfae9.json = _0x31cb0e;
+      let _0x261d3c = _0x2dfae9,
         {
           result: _0xb44c7f,
           statusCode: _0x23584d
@@ -633,19 +683,33 @@ class _0x15ca64 extends _0x31446a {
     }
   }
   async giftBag(_0x5862a3 = {}) {
+    const _0xd2c2cd = {
+      FHesN: "code",
+      dsukM: function (_0xb6b93c, _0x453955) {
+        return _0xb6b93c == _0x453955;
+      }
+    };
+    _0xd2c2cd.FHesN = "code";
+    _0xd2c2cd.dsukM = function (_0xb6b93c, _0x453955) {
+      return _0xb6b93c == _0x453955;
+    };
+    _0xd2c2cd.iQivz = "0000";
+    const _0x1f8f1a = _0xd2c2cd;
     try {
-      let _0x4894d0 = {
-          fn: "giftBag",
-          method: "post",
-          url: "https://ecustomer.cntaiping.com/campaignsms/dailySign/giftBag",
-          json: {}
-        },
+      const _0x3bf3dc = {
+        fn: "giftBag"
+      };
+      _0x3bf3dc.fn = "giftBag";
+      _0x3bf3dc.method = "post";
+      _0x3bf3dc.url = "https://ecustomer.cntaiping.com/campaignsms/dailySign/giftBag";
+      _0x3bf3dc.json = {};
+      let _0x4894d0 = _0x3bf3dc,
         {
           result: _0x1b05f0,
           statusCode: _0x89d858
         } = await this.request(_0x4894d0),
-        _0xaaf850 = _0x5f00b5.get(_0x1b05f0, "code", _0x89d858);
-      if (_0xaaf850 == "0000") {
+        _0xaaf850 = _0x5f00b5.get(_0x1b05f0, _0x1f8f1a.FHesN, _0x89d858);
+      if (_0x1f8f1a.dsukM(_0xaaf850, _0x1f8f1a.iQivz)) {
         for (let _0x1d679d of _0x1b05f0?.["data"] || []) {
           switch (_0x1d679d.status) {
             case 0:
@@ -718,11 +782,12 @@ class _0x15ca64 extends _0x31446a {
   async queryUserPoints(_0xd3f311 = {}) {
     try {
       const _0x3373ca = {
-        fn: "queryUserPoints",
-        method: "post",
-        url: "https://ecustomer.cntaiping.com/campaignsms/integral/queryUserPoints",
-        json: {}
+        fn: "queryUserPoints"
       };
+      _0x3373ca.fn = "queryUserPoints";
+      _0x3373ca.method = "post";
+      _0x3373ca.url = "https://ecustomer.cntaiping.com/campaignsms/integral/queryUserPoints";
+      _0x3373ca.json = {};
       _0x3373ca.json.sourceOrganId = "932";
       let _0x45ddc2 = _0x3373ca,
         {
@@ -795,23 +860,24 @@ class _0x15ca64 extends _0x31446a {
   }
 }
 !(async () => {
-  if (!(await _0x307e44())) {
-    return;
-  }
   _0x5f00b5.read_env(_0x15ca64);
   for (let _0x2a0d92 of _0x5f00b5.userList) {
     await _0x2a0d92.userTask();
   }
 })().catch(_0xd59247 => _0x5f00b5.log(_0xd59247)).finally(() => _0x5f00b5.exitNow());
 async function _0x307e44(_0x84aa64 = 0) {
-  let _0x144111 = true;
+  let _0x144111 = false;
   try {
-    let _0x22187d = {
-        fn: "auth",
-        method: "get",
-        url: _0x5dbce6,
-        timeout: 20000
-      },
+    const _0x1adf15 = {
+      fn: "auth",
+      method: "get",
+      url: _0x5dbce6
+    };
+    _0x1adf15.fn = "auth";
+    _0x1adf15.method = "get";
+    _0x1adf15.url = _0x5dbce6;
+    _0x1adf15.timeout = 20000;
+    let _0x22187d = _0x1adf15,
       {
         statusCode: _0x4825ee,
         result: _0x1695ca
