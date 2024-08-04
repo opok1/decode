@@ -1,405 +1,1927 @@
-//Sat Aug 03 2024 08:07:52 GMT+0000 (Coordinated Universal Time)
+//Sun Aug 04 2024 13:27:30 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-const _0x57ecf6 = ["iPad;3.7.0;14.4;network/wifi;Mozilla/5.0 (iPad; CPU OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;10;2346663656561603-4353564623932316;network/wifi;model/ONEPLUS A5010;addressid/0;aid/2dfceea045ed292a;oaid/;osVer/29;appBuild/1436;psn/BS6Y9SAiw0IpJ4ro7rjSOkCRZTgR3z2K|10;psq/5;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/10.5;jdv/;ref/com.jd.jdlite.lib.personal.view.fragment.JDPersonalFragment;partner/oppo;apprpd/MyJD_Main;eufv/1;Mozilla/5.0 (Linux; Android 10; ONEPLUS A5010 Build/QKQ1.191014.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045140 Mobile Safari/537.36", "iPhone;3.7.0;14.1;59d6ae6e8387bd09fe046d5b8918ead51614e80a;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone12,1;hasOCPay/0;appBuild/1017;supportBestPay/0;addressid/;pv/1.26;apprpd/;ref/JDLTSubMainPageViewController;psq/0;ads/;psn/59d6ae6e8387bd09fe046d5b8918ead51614e80a|3;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.1;Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;13.5;22d679c006bf9c087abf362cf1d2e0020ebb8798;network/wifi;ADID/10857A57-DDF8-4A0D-A548-7B8F43AC77EE;hasUPPay/0;pushNoticeIsOpen/1;lang/zh_CN;model/iPhone12,1;addressid/2378947694;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/15.7;apprpd/Allowance_Registered;ref/JDLTTaskCenterViewController;psq/6;ads/;psn/22d679c006bf9c087abf362cf1d2e0020ebb8798|22;jdv/0|kong|t_1000170135|tuiguang|notset|1614153044558|1614153044;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 13.5;Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;10;2616935633265383-5333463636261326;network/UNKNOWN;model/M2007J3SC;addressid/1840745247;aid/ba9e3b5853dccb1b;oaid/371d8af7dd71e8d5;osVer/29;appBuild/1436;psn/t7JmxZUXGkimd4f9Jdul2jEeuYLwxPrm|8;psq/6;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/5.6;jdv/;ref/com.jd.jdlite.lib.jdlitemessage.view.activity.MessageCenterMainActivity;partner/xiaomi;apprpd/MessageCenter_MessageMerge;eufv/1;Mozilla/5.0 (Linux; Android 10; M2007J3SC Build/QKQ1.200419.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045135 Mobile Safari/537.36", "iPhone;3.7.0;14.3;d7beab54ae7758fa896c193b49470204fbb8fce9;network/4g;ADID/97AD46C9-6D49-4642-BF6F-689256673906;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/6.28;apprpd/;ref/JDLTRedPacketViewController;psq/3;ads/;psn/d7beab54ae7758fa896c193b49470204fbb8fce9|8;jdv/0|kong|t_1001707023_|jingfen|79ad0319fa4d47e38521a616d80bc4bd|1613800945610|1613824900;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;9;D246836333735-3264353430393;network/4g;model/MIX 2;addressid/138678023;aid/bf8bcf1214b3832a;oaid/308540d1f1feb2f5;osVer/28;appBuild/1436;psn/Z/rGqfWBY/h5gcGFnVIsRw==|16;psq/3;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 9;osv/9;pv/13.7;jdv/;ref/com.jd.jdlite.lib.personal.view.fragment.JDPersonalFragment;partner/xiaomi;apprpd/MyJD_Main;eufv/1;Mozilla/5.0 (Linux; Android 9; MIX 2 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045135 Mobile Safari/537.36", "iPhone;3.7.0;14.4;eb5a9e7e596e262b4ffb3b6b5c830984c8a5c0d5;network/wifi;ADID/5603541B-30C1-4B5C-A782-20D0B569D810;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,2;addressid/1041002757;hasOCPay/0;appBuild/101;supportBestPay/0;pv/34.6;apprpd/MyJD_Main;ref/MyJdMTAManager;psq/5;ads/;psn/eb5a9e7e596e262b4ffb3b6b5c830984c8a5c0d5|44;jdv/0|androidapp|t_335139774|appshare|CopyURL|1612612940307|1612612944;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;21631ed983b3e854a3154b0336413825ad0d6783;network/3g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone13,4;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.47;apprpd/;ref/JDLTSubMainPageViewController;psq/8;ads/;psn/21631ed983b3e854a3154b0336413825ad0d6783|9;jdv/0|direct|-|none|-|1614150725100|1614225882;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;13.5;500a795cb2abae60b877ee4a1930557a800bef1c;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone8,1;addressid/669949466;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/9.11;apprpd/;ref/JDLTSubMainPageViewController;psq/10;ads/;psn/500a795cb2abae60b877ee4a1930557a800bef1c|11;jdv/;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 13.5;Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPad;3.7.0;14.4;f5e7b7980fb50efc9c294ac38653c1584846c3db;network/wifi;hasUPPay/0;pushNoticeIsOpen/1;lang/zh_CN;model/iPad6,3;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/231.11;pap/JA2020_3112531|3.7.0|IOS 14.4;apprpd/;psn/f5e7b7980fb50efc9c294ac38653c1584846c3db|305;usc/kong;jdv/0|kong|t_1000170135|tuiguang|notset|1613606450668|1613606450;umd/tuiguang;psq/2;ucp/t_1000170135;app_device/IOS;utr/notset;ref/JDLTRedPacketViewController;adk/;ads/;Mozilla/5.0 (iPad; CPU OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;19fef5419f88076c43f5317eabe20121d52c6a61;network/wifi;ADID/00000000-0000-0000-0000-000000000000;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,8;addressid/3430850943;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/10.4;apprpd/;ref/JDLTSubMainPageViewController;psq/3;ads/;psn/19fef5419f88076c43f5317eabe20121d52c6a61|16;jdv/0|kong|t_1001327829_|jingfen|f51febe09dd64b20b06bc6ef4c1ad790#/|1614096460311|1614096511;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;12.2;f995bc883282f7c7ea9d7f32da3f658127aa36c7;network/4g;ADID/9F40F4CA-EA7C-4F2E-8E09-97A66901D83E;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone10,4;addressid/525064695;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/11.11;apprpd/;ref/JDLTSubMainPageViewController;psq/2;ads/;psn/f995bc883282f7c7ea9d7f32da3f658127aa36c7|22;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 12.2;Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;10;5366566313931326-6633931643233693;network/wifi;model/Mi9 Pro 5G;addressid/0;aid/5fe6191bf39a42c9;oaid/e3a9473ef6699f75;osVer/29;appBuild/1436;psn/b3rJlGi AwLqa9AqX7Vp0jv4T7XPMa0o|5;psq/4;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/5.4;jdv/;ref/HomeFragment;partner/xiaomi;apprpd/Home_Main;eufv/1;Mozilla/5.0 (Linux; Android 10; Mi9 Pro 5G Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045135 Mobile Safari/537.36", "iPhone;3.7.0;14.4;4e6b46913a2e18dd06d6d69843ee4cdd8e033bc1;network/3g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone13,2;addressid/666624049;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/54.11;apprpd/MessageCenter_MessageMerge;ref/MessageCenterController;psq/10;ads/;psn/4e6b46913a2e18dd06d6d69843ee4cdd8e033bc1|101;jdv/0|kong|t_2010804675_|jingfen|810dab1ba2c04b8588c5aa5a0d44c4bd|1614183499;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.2;c71b599e9a0bcbd8d1ad924d85b5715530efad06;network/wifi;ADID/751C6E92-FD10-4323-B37C-187FD0CF0551;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,8;addressid/4053561885;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/263.8;apprpd/;ref/JDLTSubMainPageViewController;psq/2;ads/;psn/c71b599e9a0bcbd8d1ad924d85b5715530efad06|481;jdv/0|kong|t_1001610202_|jingfen|3911bea7ee2f4fcf8d11fdf663192bbe|1614157052210|1614157056;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.2;Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;2d306ee3cacd2c02560627a5113817ebea20a2c9;network/4g;ADID/A346F099-3182-4889-9A62-2B3C28AB861E;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone13,3;hasOCPay/0;appBuild/1017;supportBestPay/0;addressid/;pv/1.35;apprpd/Allowance_Registered;ref/JDLTTaskCenterViewController;psq/0;ads/;psn/2d306ee3cacd2c02560627a5113817ebea20a2c9|2;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;28355aff16cec8bcf3e5728dbbc9725656d8c2c2;network/4g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone10,2;addressid/833058617;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.10;apprpd/;ref/JDLTWebViewController;psq/9;ads/;psn/28355aff16cec8bcf3e5728dbbc9725656d8c2c2|5;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;13.5;24ddac73a3de1b91816b7aedef53e97c4c313733;network/4g;ADID/598C6841-76AC-4512-AA97-CBA940548D70;hasUPPay/0;pushNoticeIsOpen/1;lang/zh_CN;model/iPhone11,6;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/12.6;apprpd/;ref/JDLTSubMainPageViewController;psq/5;ads/;psn/24ddac73a3de1b91816b7aedef53e97c4c313733|23;jdv/0|kong|t_1000170135|tuiguang|notset|1614126110904|1614126110;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 13.5;Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;d7732ba60c8ff73cc3f5ba7290a3aa9551f73a1b;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone12,1;addressid/25239372;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/8.6;apprpd/;ref/JDLTSubMainPageViewController;psq/5;ads/;psn/d7732ba60c8ff73cc3f5ba7290a3aa9551f73a1b|14;jdv/0|kong|t_1001226363_|jingfen|5713234d1e1e4893b92b2de2cb32484d|1614182989528|1614182992;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;ca1a32afca36bc9fb37fd03f18e653bce53eaca5;network/wifi;ADID/3AF380AB-CB74-4FE6-9E7C-967693863CA3;hasUPPay/0;pushNoticeIsOpen/1;lang/zh_CN;model/iPhone8,1;addressid/138323416;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/72.12;apprpd/;ref/JDLTRedPacketViewController;psq/3;ads/;psn/ca1a32afca36bc9fb37fd03f18e653bce53eaca5|109;jdv/0|kong|t_1000536212_|jingfen|c82bfa19e33a4269a5884ffc614790f4|1614141246;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;10;7346933333666353-8333366646039373;network/wifi;model/ONEPLUS A5010;addressid/138117973;aid/7d933f6583cfd097;oaid/;osVer/29;appBuild/1436;psn/T/eqfRSwp8VKEvvXyEunq09Cg2MUkiQ5|17;psq/4;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/11.4;jdv/0|kong|t_1001849073_|jingfen|495a47f6c0b8431c9d460f61ad2304dc|1614084403978|1614084407;ref/HomeFragment;partner/oppo;apprpd/Home_Main;eufv/1;Mozilla/5.0 (Linux; Android 10; ONEPLUS A5010 Build/QKQ1.191014.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045140 Mobile Safari/537.36", "android;3.7.0;11;4626269356736353-5353236346334673;network/wifi;model/M2006J10C;addressid/0;aid/dbb9e7655526d3d7;oaid/66a7af49362987b0;osVer/30;appBuild/1436;psn/rQRQgJ 4 S3qkq8YDl28y6jkUHmI/rlX|3;psq/4;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 11;osv/11;pv/3.4;jdv/;ref/HomeFragment;partner/xiaomi;apprpd/Home_Main;eufv/1;Mozilla/5.0 (Linux; Android 11; M2006J10C Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045513 Mobile Safari/537.36", "iPhone;3.7.0;14.4;78fc1d919de0c8c2de15725eff508d8ab14f9c82;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone13,1;addressid/137829713;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/23.11;apprpd/;ref/JDLTSubMainPageViewController;psq/10;ads/;psn/78fc1d919de0c8c2de15725eff508d8ab14f9c82|34;jdv/0|iosapp|t_335139774|appshare|Wxfriends|1612508702380|1612534293;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;10;0373263343266633-5663030363465326;network/wifi;model/Redmi Note 7;addressid/590846082;aid/07b34bf3e6006d5b;oaid/17975a142e67ec92;osVer/29;appBuild/1436;psn/OHNqtdhQKv1okyh7rB3HxjwI00ixJMNG|4;psq/3;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/2.3;jdv/;ref/activityId=8a8fabf3cccb417f8e691b6774938bc2;partner/xiaomi;apprpd/jsbqd_home;eufv/1;Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.152 Mobile Safari/537.36", "android;3.7.0;10;3636566623663623-1693635613166646;network/wifi;model/ASUS_I001DA;addressid/1397761133;aid/ccef2fc2a96e1afd;oaid/;osVer/29;appBuild/1436;psn/T8087T0D82PHzJ4VUMGFrfB9dw4gUnKG|76;psq/5;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/73.5;jdv/0|kong|t_1002354188_|jingfen|2335e043b3344107a2750a781fde9a2e#/|1614097081426|1614097087;ref/com.jd.jdlite.lib.personal.view.fragment.JDPersonalFragment;partner/yingyongbao;apprpd/MyJD_Main;eufv/1;Mozilla/5.0 (Linux; Android 10; ASUS_I001DA Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045140 Mobile Safari/537.36", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone10,2;addressid/138419019;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/5.7;apprpd/MyJD_Main;ref/MyJdMTAManager;psq/6;ads/;psn/4ee6af0db48fd605adb69b63f00fcbb51c2fc3f0|9;jdv/0|direct|-|none|-|1613705981655|1613823229;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;network/wifi;ADID/F9FD7728-2956-4DD1-8EDD-58B07950864C;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone10,1;addressid/1346909722;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/30.8;apprpd/;ref/JDLTSubMainPageViewController;psq/7;ads/;psn/40d4d4323eb3987226cae367d6b0d8be50f2c7b3|39;jdv/0|kong|t_1000252057_0|tuiguang|eba7648a0f4445aa9cfa6f35c6f36e15|1613995717959|1613995723;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;ADID/5D306F0D-A131-4B26-947E-166CCB9BFFFF;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,6;addressid/138164461;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/7.8;apprpd/;ref/JDLTSubMainPageViewController;psq/7;ads/;psn/d40e5d4a33c100e8527f779557c347569b49c304|7;jdv/0|kong|t_1001226363_|jingfen|3bf5372cb9cd445bbb270b8bc9a34f00|1608439066693|1608439068;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPad;3.7.0;14.5;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPad8,9;hasOCPay/0;appBuild/1017;supportBestPay/0;addressid/;pv/1.20;apprpd/MyJD_Main;ref/MyJdMTAManager;psq/5;ads/;psn/d9f5ddaa0160a20f32fb2c8bfd174fae7993c1b4|3;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.5;Mozilla/5.0 (iPad; CPU OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;network/wifi;ADID/31548A9C-8A01-469A-B148-E7D841C91FD0;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/10.5;apprpd/;ref/JDLTSubMainPageViewController;psq/4;ads/;psn/a858fb4b40e432ea32f80729916e6c3e910bb922|12;jdv/0|direct|-|none|-|1613898710373|1613898712;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;13.5;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,2;addressid/2237496805;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/13.6;apprpd/;ref/JDLTSubMainPageViewController;psq/5;ads/;psn/48e495dcf5dc398b4d46b27e9f15a2b427a154aa|15;jdv/0|direct|-|none|-|1613354874698|1613952828;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 13.5;Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;10;3346332626262353-1666434336539336;network/wifi;model/ONEPLUS A6000;addressid/0;aid/3d3bbb25af44c59c;oaid/;osVer/29;appBuild/1436;psn/ECbc2EqmdSa7mDF1PS1GSrV/Tn7R1LS1|6;psq/8;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/2.67;jdv/0|direct|-|none|-|1613822479379|1613991194;ref/com.jd.jdlite.lib.personal.view.fragment.JDPersonalFragment;partner/oppo;apprpd/MyJD_Main;eufv/1;Mozilla/5.0 (Linux; Android 10; ONEPLUS A6000 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045140 Mobile Safari/537.36", "android;3.7.0;8.1.0;8363834353530333132333132373-43D2930366035323639333662383;network/wifi;model/16th Plus;addressid/0;aid/f909e5f2c464c7c6;oaid/;osVer/27;appBuild/1436;psn/c21YWvVr77Hn6 pOZfxXGY4TZrre1 UOL5hcPbCEDMo=|3;psq/10;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 8.1.0;osv/8.1.0;pv/2.15;jdv/;ref/com.jd.jdlite.lib.personal.view.fragment.JDPersonalFragment;partner/jsxdlyqj09;apprpd/MyJD_Main;eufv/1;Mozilla/5.0 (Linux; Android 8.1.0; 16th Plus Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045514 Mobile Safari/537.36", "android;3.7.0;11;1343467336264693-3343562673463613;network/wifi;model/Mi 10 Pro;addressid/0;aid/14d7cbd934eb7dc1;oaid/335f198546eb3141;osVer/30;appBuild/1436;psn/ZcQh/Wov sNYfZ6JUjTIUBu28 KT0T3u|1;psq/24;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 11;osv/11;pv/1.24;jdv/;ref/com.jd.jdlite.lib.jdlitemessage.view.activity.MessageCenterMainActivity;partner/xiaomi;apprpd/MessageCenter_MessageMerge;eufv/1;Mozilla/5.0 (Linux; Android 11; Mi 10 Pro Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36", "android;3.7.0;10;8353636393732346-6646931673935346;network/wifi;model/MI 8;addressid/1969998059;aid/8566972dfd9a795d;oaid/4a8b773c3e307386;osVer/29;appBuild/1436;psn/PhYbUtCsCJo r 1b8hwxjnY8rEv5S8XC|383;psq/14;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/374.14;jdv/0|iosapp|t_335139774|liteshare|CopyURL|1609306590175|1609306596;ref/com.jd.jdlite.lib.jdlitemessage.view.activity.MessageCenterMainActivity;partner/jsxdlyqj09;apprpd/MessageCenter_MessageMerge;eufv/1;Mozilla/5.0 (Linux; Android 10; MI 8 Build/QKQ1.190828.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045140 Mobile Safari/537.36", "iPhone;3.7.0;14.4;6d343c58764a908d4fa56609da4cb3a5cc1396d3;network/wifi;ADID/4965D884-3E61-4C4E-AEA7-9A8CE3742DA7;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,1;addressid/70390480;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.24;apprpd/MyJD_Main;ref/https%3A%2F%2Fjdcs.m.jd.com%2Fafter%2Findex.action%3FcategoryId%3D600%26v%3D6%26entry%3Dm_self_jd;psq/4;ads/;psn/6d343c58764a908d4fa56609da4cb3a5cc1396d3|17;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;13.6.1;4606ddccdfe8f343f8137de7fea7f91fc4aef3a3;network/4g;ADID/C6FB6E20-D334-45FA-818A-7A4C58305202;hasUPPay/0;pushNoticeIsOpen/1;lang/zh_CN;model/iPhone10,1;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/5.9;apprpd/MyJD_Main;ref/MyJdMTAManager;psq/8;ads/;psn/4606ddccdfe8f343f8137de7fea7f91fc4aef3a3|5;jdv/0|iosapp|t_335139774|liteshare|Qqfriends|1614206359106|1614206366;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 13.6.1;Mozilla/5.0 (iPhone; CPU iPhone OS 13_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;3b6e79334551fc6f31952d338b996789d157c4e8;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone10,1;addressid/138051400;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/14.34;apprpd/MyJD_Main;ref/MyJdMTAManager;psq/12;ads/;psn/3b6e79334551fc6f31952d338b996789d157c4e8|46;jdv/0|kong|t_1001707023_|jingfen|e80d7173a4264f4c9a3addcac7da8b5d|1613837384708|1613858760;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;10;1346235693831363-2373837393932673;network/wifi;model/LYA-AL00;addressid/3321567203;aid/1d2e9816278799b7;oaid/00000000-0000-0000-0000-000000000000;osVer/29;appBuild/1436;psn/45VUZFTZJkhP5fAXbeBoQ0   O2GCB I|7;psq/5;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/5.8;jdv/0|iosapp|t_335139774|liteshare|CopyURL|1614066210320|1614066219;ref/com.jd.jdlite.lib.personal.view.fragment.JDPersonalFragment;partner/huawei;apprpd/MyJD_Main;eufv/1;Mozilla/5.0 (Linux; Android 10; LYA-AL00 Build/HUAWEILYA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36", "iPhone;3.7.0;14.3;c2a8854e622a1b17a6c56c789f832f9d78ef1ba7;network/wifi;hasUPPay/0;pushNoticeIsOpen/1;lang/zh_CN;model/iPhone12,5;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/3.9;apprpd/MyJD_Main;ref/MyJdMTAManager;psq/8;ads/;psn/c2a8854e622a1b17a6c56c789f832f9d78ef1ba7|6;jdv/0|direct|-|none|-|1613541016735|1613823566;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;9;;network/wifi;model/MIX 2S;addressid/;aid/f87efed6d9ed3c65;oaid/94739128ef9dd245;osVer/28;appBuild/1436;psn/R7wD/OWkQjYWxax1pDV6kTIDFPJCUid7C/nl2hHnUuI=|3;psq/13;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 9;osv/9;pv/1.42;jdv/;ref/activityId=8a8fabf3cccb417f8e691b6774938bc2;partner/xiaomi;apprpd/jsbqd_home;eufv/1;Mozilla/5.0 (Linux; Android 9; MIX 2S Build/PKQ1.180729.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36", "iPhone;3.7.0;14.4;network/wifi;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;10;network/wifi;Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.152 Mobile Safari/537.36", "iPhone;3.7.0;14.4;network/3g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPad;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/1;lang/zh_CN;model/iPad6,3;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/231.11;pap/JA2020_3112531|3.7.0|IOS 14.4;apprpd/;psn/f5e7b7980fb50efc9c294ac38653c1584846c3db|305;usc/kong;jdv/0|kong|t_1000170135|tuiguang|notset|1613606450668|1613606450;umd/tuiguang;psq/2;ucp/t_1000170135;app_device/IOS;utr/notset;ref/JDLTRedPacketViewController;adk/;ads/;Mozilla/5.0 (iPad; CPU OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;13.5;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone8,1;addressid/669949466;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/9.11;apprpd/;ref/JDLTSubMainPageViewController;psq/10;ads/;psn/500a795cb2abae60b877ee4a1930557a800bef1c|11;jdv/;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 13.5;Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;network/3g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone13,4;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.47;apprpd/;ref/JDLTSubMainPageViewController;psq/8;ads/;psn/21631ed983b3e854a3154b0336413825ad0d6783|9;jdv/0|direct|-|none|-|1614150725100|1614225882;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;network/3g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone13,4;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.47;apprpd/;ref/JDLTSubMainPageViewController;psq/8;ads/;psn/21631ed983b3e854a3154b0336413825ad0d6783|9;jdv/0|direct|-|none|-|1614150725100|1614225882;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone13,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/3.15;apprpd/;ref/https%3A%2F%2Fjdcs.m.jd.com%2Fchat%2Findex.action%3Fentry%3Djd_m_JiSuCommodity%26pid%3D7763388%26lng%3D118.159665%26lat%3D24.504633%26sid%3D31cddc2d58f6e36bf2c31c4e8a79767w%26un_area%3D16_1315_3486_0;psq/12;ads/;psn/c10e0db6f15dec57a94637365f4c3d43e05bbd48|4;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone13,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/3.15;apprpd/;ref/https%3A%2F%2Fjdcs.m.jd.com%2Fchat%2Findex.action%3Fentry%3Djd_m_JiSuCommodity%26pid%3D7763388%26lng%3D118.159665%26lat%3D24.504633%26sid%3D31cddc2d58f6e36bf2c31c4e8a79767w%26un_area%3D16_1315_3486_0;psq/12;ads/;psn/c10e0db6f15dec57a94637365f4c3d43e05bbd48|4;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone13,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/3.15;apprpd/;ref/https%3A%2F%2Fjdcs.m.jd.com%2Fchat%2Findex.action%3Fentry%3Djd_m_JiSuCommodity%26pid%3D7763388%26lng%3D118.159665%26lat%3D24.504633%26sid%3D31cddc2d58f6e36bf2c31c4e8a79767w%26un_area%3D16_1315_3486_0;psq/12;ads/;psn/c10e0db6f15dec57a94637365f4c3d43e05bbd48|4;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,6;hasOCPay/0;appBuild/1017;supportBestPay/0;addressid/2813715704;pv/67.38;apprpd/MyJD_Main;ref/https%3A%2F%2Fh5.m.jd.com%2FbabelDiy%2FZeus%2F2ynE8QDtc2svd36VowmYWBzzDdK6%2Findex.html%3Flng%3D103.957532%26lat%3D30.626962%26sid%3D4fe8ef4283b24723a7bb30ee87c18b2w%26un_area%3D22_1930_49324_52512;psq/4;ads/;psn/5aef178f95931bdbbde849ea9e2fc62b18bc5829|127;jdv/0|direct|-|none|-|1612588090667|1613822580;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;;network/4g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/6.28;apprpd/;ref/JDLTRedPacketViewController;psq/3;ads/;psn/d7beab54ae7758fa896c193b49470204fbb8fce9|8;jdv/0|kong|t_1001707023_|jingfen|79ad0319fa4d47e38521a616d80bc4bd|1613800945610|1613824900;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;network/4g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/6.28;apprpd/;ref/JDLTRedPacketViewController;psq/3;ads/;psn/d7beab54ae7758fa896c193b49470204fbb8fce9|8;jdv/0|kong|t_1001707023_|jingfen|79ad0319fa4d47e38521a616d80bc4bd|1613800945610|1613824900;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;;network/4g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/6.28;apprpd/;ref/JDLTRedPacketViewController;psq/3;ads/;psn/d7beab54ae7758fa896c193b49470204fbb8fce9|8;jdv/0|kong|t_1001707023_|jingfen|79ad0319fa4d47e38521a616d80bc4bd|1613800945610|1613824900;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;network/4g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/6.28;apprpd/;ref/JDLTRedPacketViewController;psq/3;ads/;psn/d7beab54ae7758fa896c193b49470204fbb8fce9|8;jdv/0|kong|t_1001707023_|jingfen|79ad0319fa4d47e38521a616d80bc4bd|1613800945610|1613824900;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;network/4g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,2;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/6.28;apprpd/;ref/JDLTRedPacketViewController;psq/3;ads/;psn/d7beab54ae7758fa896c193b49470204fbb8fce9|8;jdv/0|kong|t_1001707023_|jingfen|79ad0319fa4d47e38521a616d80bc4bd|1613800945610|1613824900;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/4g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone12,1;addressid/3104834020;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.6;apprpd/;ref/JDLTSubMainPageViewController;psq/5;ads/;psn/c633e62b5a4ad0fdd93d9862bdcacfa8f3ecef63|6;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone10,1;addressid/1346909722;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/30.8;apprpd/;ref/JDLTSubMainPageViewController;psq/7;ads/;psn/40d4d4323eb3987226cae367d6b0d8be50f2c7b3|39;jdv/0|kong|t_1000252057_0|tuiguang|eba7648a0f4445aa9cfa6f35c6f36e15|1613995717959|1613995723;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.3;network/wifi;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone10,1;addressid/1346909722;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/30.8;apprpd/;ref/JDLTSubMainPageViewController;psq/7;ads/;psn/40d4d4323eb3987226cae367d6b0d8be50f2c7b3|39;jdv/0|kong|t_1000252057_0|tuiguang|eba7648a0f4445aa9cfa6f35c6f36e15|1613995717959|1613995723;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,6;addressid/138164461;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/7.8;apprpd/;ref/JDLTSubMainPageViewController;psq/7;ads/;psn/d40e5d4a33c100e8527f779557c347569b49c304|7;jdv/0|kong|t_1001226363_|jingfen|3bf5372cb9cd445bbb270b8bc9a34f00|1608439066693|1608439068;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,6;addressid/138164461;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/7.8;apprpd/;ref/JDLTSubMainPageViewController;psq/7;ads/;psn/d40e5d4a33c100e8527f779557c347569b49c304|7;jdv/0|kong|t_1001226363_|jingfen|3bf5372cb9cd445bbb270b8bc9a34f00|1608439066693|1608439068;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone11,6;addressid/138164461;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/7.8;apprpd/;ref/JDLTSubMainPageViewController;psq/7;ads/;psn/d40e5d4a33c100e8527f779557c347569b49c304|7;jdv/0|kong|t_1001226363_|jingfen|3bf5372cb9cd445bbb270b8bc9a34f00|1608439066693|1608439068;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;13.5;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,2;addressid/2237496805;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/13.6;apprpd/;ref/JDLTSubMainPageViewController;psq/5;ads/;psn/48e495dcf5dc398b4d46b27e9f15a2b427a154aa|15;jdv/0|direct|-|none|-|1613354874698|1613952828;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 13.5;Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "android;3.7.0;10;network/wifi;model/ONEPLUS A6000;addressid/0;aid/3d3bbb25af44c59c;oaid/;osVer/29;appBuild/1436;psn/ECbc2EqmdSa7mDF1PS1GSrV/Tn7R1LS1|6;psq/8;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/2.67;jdv/0|direct|-|none|-|1613822479379|1613991194;ref/com.jd.jdlite.lib.personal.view.fragment.JDPersonalFragment;partner/oppo;apprpd/MyJD_Main;eufv/1;Mozilla/5.0 (Linux; Android 10; ONEPLUS A6000 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045140 Mobile Safari/537.36", "android;3.7.0;8.1.0;network/wifi;model/16th Plus;addressid/0;aid/f909e5f2c464c7c6;oaid/;osVer/27;appBuild/1436;psn/c21YWvVr77Hn6 pOZfxXGY4TZrre1 UOL5hcPbCEDMo=|3;psq/10;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 8.1.0;osv/8.1.0;pv/2.15;jdv/;ref/com.jd.jdlite.lib.personal.view.fragment.JDPersonalFragment;partner/jsxdlyqj09;apprpd/MyJD_Main;eufv/1;Mozilla/5.0 (Linux; Android 8.1.0; 16th Plus Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045514 Mobile Safari/537.36", "android;3.7.0;11;network/wifi;model/Mi 10 Pro;addressid/0;aid/14d7cbd934eb7dc1;oaid/335f198546eb3141;osVer/30;appBuild/1436;psn/ZcQh/Wov sNYfZ6JUjTIUBu28 KT0T3u|1;psq/24;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 11;osv/11;pv/1.24;jdv/;ref/com.jd.jdlite.lib.jdlitemessage.view.activity.MessageCenterMainActivity;partner/xiaomi;apprpd/MessageCenter_MessageMerge;eufv/1;Mozilla/5.0 (Linux; Android 11; Mi 10 Pro Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36", "android;3.7.0;10;network/wifi;model/MI 8;addressid/1969998059;aid/8566972dfd9a795d;oaid/4a8b773c3e307386;osVer/29;appBuild/1436;psn/PhYbUtCsCJo r 1b8hwxjnY8rEv5S8XC|383;psq/14;adk/;ads/;pap/JA2020_3112531|3.7.0|ANDROID 10;osv/10;pv/374.14;jdv/0|iosapp|t_335139774|liteshare|CopyURL|1609306590175|1609306596;ref/com.jd.jdlite.lib.jdlitemessage.view.activity.MessageCenterMainActivity;partner/jsxdlyqj09;apprpd/MessageCenter_MessageMerge;eufv/1;Mozilla/5.0 (Linux; Android 10; MI 8 Build/QKQ1.190828.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045140 Mobile Safari/537.36", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone8,4;addressid/1477231693;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/21.15;apprpd/MyJD_Main;ref/https%3A%2F%2Fgold.jd.com%2F%3Flng%3D0.000000%26lat%3D0.000000%26sid%3D4584eb84dc00141b0d58e000583a338w%26un_area%3D19_1607_3155_62114;psq/0;ads/;psn/2c822e59db319590266cc83b78c4a943783d0077|46;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,1;addressid/70390480;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.24;apprpd/MyJD_Main;ref/https%3A%2F%2Fjdcs.m.jd.com%2Fafter%2Findex.action%3FcategoryId%3D600%26v%3D6%26entry%3Dm_self_jd;psq/4;ads/;psn/6d343c58764a908d4fa56609da4cb3a5cc1396d3|17;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,1;addressid/70390480;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.24;apprpd/MyJD_Main;ref/https%3A%2F%2Fjdcs.m.jd.com%2Fafter%2Findex.action%3FcategoryId%3D600%26v%3D6%26entry%3Dm_self_jd;psq/4;ads/;psn/6d343c58764a908d4fa56609da4cb3a5cc1396d3|17;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,1;addressid/70390480;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.24;apprpd/MyJD_Main;ref/https%3A%2F%2Fjdcs.m.jd.com%2Fafter%2Findex.action%3FcategoryId%3D600%26v%3D6%26entry%3Dm_self_jd;psq/4;ads/;psn/6d343c58764a908d4fa56609da4cb3a5cc1396d3|17;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,1;addressid/70390480;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.24;apprpd/MyJD_Main;ref/https%3A%2F%2Fjdcs.m.jd.com%2Fafter%2Findex.action%3FcategoryId%3D600%26v%3D6%26entry%3Dm_self_jd;psq/4;ads/;psn/6d343c58764a908d4fa56609da4cb3a5cc1396d3|17;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPhone;3.7.0;14.4;network/4g;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone12,3;hasOCPay/0;appBuild/1017;supportBestPay/0;addressid/;pv/3.49;apprpd/MyJD_Main;ref/MyJdMTAManager;psq/7;ads/;psn/9e0e0ea9c6801dfd53f2e50ffaa7f84c7b40cd15|6;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "iPad;3.7.0;14.4;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPad7,5;addressid/;hasOCPay/0;appBuild/1017;supportBestPay/0;pv/4.14;apprpd/MyJD_Main;ref/MyJdMTAManager;psq/3;ads/;psn/956c074c769cd2eeab2e36fca24ad4c9e469751a|8;jdv/0|;adk/;app_device/IOS;pap/JA2020_3112531|3.7.0|IOS 14.4;Mozilla/5.0 (iPad; CPU OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"],
-  request = require("request"),
-  {
-    "sendNotify": sendNotify
-  } = require("./sendNotify1.js"),
-  _0xhicong = require("md5"),
-  _0x355d3c = require("child_process").exec,
-  _0xaaf3e8 = "网络异常，跳过";
-function _0x533bff(_0x3a06e3 = 0, _0xf8674 = 100) {
-  return Math.min(Math.floor(_0x3a06e3 + Math.random() * (_0xf8674 - _0x3a06e3)), _0xf8674);
-}
-const _0x5f1259 = _0x57ecf6[_0x533bff(0, _0x57ecf6.length - 1)];
-async function _0x5670f4(_0x2a5cf4, _0x14829f) {
-  const _0x5200e4 = _0x10d424(_0x2a5cf4);
-  !_0x5200e4.has("wxPuid") ? console.log("没有获取到推送 uid，不推送消息\n") : await sendNotify("饿了么抢券成功推送", _0x14829f, {
-    "uid": _0x5200e4.get("wxPuid")
-  });
-}
-const _0x249dba = async (_0x1df154, _0x3dbacf, _0x116c3c = 1, _0x6e0982 = 5) => {
-    return _0xhicong(_0x1df154);
-  },
-  _0x2f0cce = async (_0x5db798, _0x541ff4, _0x21be2d, _0x3ed834 = 1, _0x10a924 = 5) => {
-    const _0x40bab0 = _0x458c4f(_0x5db798),
-      _0x38e137 = _0x40bab0.split("_")[0],
-      _0x49a1c1 = _0x38e137 + _0x541ff4;
-    return _0xhicong(_0x49a1c1);
-  };
-function _0x458c4f(_0xb6987f) {
-  if (!_0xb6987f) {
-    return "-1";
-  }
-  for (var _0x477372 = _0xb6987f.split(";"), _0x27df48 = 0; _0x27df48 < _0x477372.length; _0x27df48++) {
-    var _0xe28e85 = _0x477372[_0x27df48].split("=");
-    if ([" _m_h5_tk", "_m_h5_tk"].includes(_0xe28e85[0])) return _0xe28e85[1];
-  }
-  return "-1";
-}
-const _0x5d2ff1 = _0x2ea78d => {
-  return new Promise(_0x57e926 => {
-    setTimeout(() => {
-      _0x57e926();
-    }, _0x2ea78d * 1000);
-  });
-};
-function _0x2c737d(_0x23ad5f, _0x1159c0, _0xda7549, _0x52bccc, _0x3ce5ce = 5) {
-  const _0x379686 = {
-    "url": "https://waimai-guide.ele.me/h5/mtop.alsc.personal.queryminecenter/1.0/?jsv=2.6.2&appKey=12574478",
-    "headers": {}
-  };
-  return _0x379686.headers.Cookie = _0x23ad5f, _0x379686.headers.method = "GET", _0x379686.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36", _0x5bcbae(_0x930ae8 => {
-    try {
-      request(_0x379686, async (_0x1fa0ab, _0x4a75a4, _0x12e24c) => {
-        if (!_0x1fa0ab && _0x4a75a4.statusCode === 200) {
-          const _0xc48788 = JSON.stringify(_0x4a75a4.headers["set-cookie"]),
-            _0x3d2b6a = /_m_h5_tk=(\S*);/,
-            _0x14988d = _0xc48788.match(_0x3d2b6a)[1],
-            _0x3a510d = " _m_h5_tk=" + _0x14988d.split(";")[0],
-            _0x3e1054 = /_m_h5_tk_enc=(\S*);/,
-            _0x787847 = _0xc48788.match(_0x3e1054)[1],
-            _0x51dbd2 = " _m_h5_tk_enc=" + _0x787847.split(";")[0];
-          _0x23ad5f = _0xebb331(_0x3a510d, _0x51dbd2, _0x23ad5f);
-          _0x3ce5ce <= 0 ? (console.log("第", _0x1159c0 + 1, "cookie存在异常，请检查"), _0x930ae8(null)) : _0x930ae8(await _0x539aac(_0x23ad5f, _0x1159c0, _0xda7549, _0x52bccc, _0x3ce5ce - 1));
-        } else _0x930ae8(null);
-      });
-    } catch (_0xe1a02a) {
-      console.log(_0xaaf3e8);
-    }
-  });
-}
-function _0xebb331(_0x357723, _0x1011d8, _0x46e215) {
-  let _0x281c8e = false;
-  for (var _0x4d3c98 = _0x46e215.split(";"), _0x148903 = 0; _0x148903 < _0x4d3c98.length; _0x148903++) {
-    var _0x4c3f60 = _0x4d3c98[_0x148903].split("=");
-    if (["_m_h5_tk", " _m_h5_tk"].indexOf(_0x4c3f60[0]) > -1) {
-      _0x281c8e = true;
-      _0x4d3c98[_0x148903] = _0x357723;
-    }
-    if ([" _m_h5_tk_enc", "_m_h5_tk_enc"].indexOf(_0x4c3f60[0]) > -1) {
-      _0x4d3c98[_0x148903] = _0x1011d8;
-      _0x281c8e = true;
-    }
-  }
-  var _0x3bb89b = "";
-  if (_0x281c8e) for (_0x148903 = 0; _0x148903 < _0x4d3c98.length; _0x148903++) {
-    _0x3bb89b += _0x4d3c98[_0x148903];
-    _0x148903 != _0x4d3c98.length - 1 && (_0x3bb89b += ";");
-  } else _0x3bb89b = _0x46e215 + ";" + _0x357723 + ";" + _0x1011d8;
-  return _0x46e215 = _0x3bb89b, _0x46e215;
-}
-const _0x539aac = async (_0x1b5f0d, _0x5b2860, _0x3a6f9e, _0x4041a5, _0x3170ee = 5) => {
-    _0x1b5f0d = _0x1b5f0d.replace(/\s/g, "");
-    let _0x5ae6a9 = _0x458c4f(_0x1b5f0d);
-    _0x5ae6a9 = _0x5ae6a9.split("_")[0];
-    let _0x572c99 = {},
-      _0x4a303 = JSON.stringify(_0x572c99),
-      _0x45334a = 12574478,
-      _0x47dede = new Date().getTime(),
-      _0x2b8b93 = await _0x249dba(_0x5ae6a9 + "&" + _0x47dede + "&" + _0x45334a + "&" + _0x4a303, _0x3a6f9e, _0x4041a5);
-    const _0x17aeca = {
-        "Cookie": _0x1b5f0d,
-        "User-Agent": _0x5f1259
-      },
-      _0x4b4629 = {
-        "url": "https://shopping.ele.me/h5/mtop.alsc.user.session.ele.check/1.0/?H5Request=true&api=mtop.alsc.user.session.ele.check&appKey=12574478&data={}&dataType=json&jsv=2.6.2&mainDomain=ele.me&pageDomain=ele.me&sign=" + _0x2b8b93 + "&subDomain=shopping&t=" + _0x47dede + "&timeout=5000&type=json&v=1.0",
-        "method": "GET",
-        "headers": _0x17aeca
-      };
-    return _0x5bcbae(_0x4aa15e => {
-      try {
-        request(_0x4b4629, async (_0x238a6e, _0x34eb9a, _0x59bc69) => {
-          if (!_0x238a6e && _0x34eb9a.statusCode === 200) {
-            const _0x8d06cd = JSON.parse(_0x59bc69);
-            _0x8d06cd.data.errorCode === "000502" ? (console.log("第", _0x5b2860 + 1, "账号失效！请重新登录！！！😭"), _0x4aa15e(null)) : (_0x3170ee <= 0 && (console.log("第", _0x5b2860 + 1, "cookie存在异常，请检查"), _0x4aa15e(null)), _0x8d06cd.ret.includes("FAIL_SYS_TOKEN_EXOIRED::令牌过期") || _0x8d06cd.ret.includes("FAIL_SYS_TOKEN_EMPTY::令牌为空") ? _0x4aa15e(await _0x2c737d(_0x1b5f0d, _0x5b2860, _0x3a6f9e, _0x4041a5, _0x3170ee - 1)) : _0x4aa15e(_0x1b5f0d));
-          } else {
-            if (_0x238a6e && _0x238a6e.message.indexOf("Invalid character in header content [\"Cookie\"]") !== -1) {
-              console.log("第", _0x5b2860 + 1, "账号ck不合法，请确认！！！");
-            } else console.log(_0x238a6e);
-            _0x4aa15e(null);
-          }
-        });
-      } catch (_0xdac9d2) {
-        console.log(_0xaaf3e8);
-      }
-    });
-  },
-  _0x115399 = async (_0x342288, _0x530e17, _0x134594, _0x1f0d62 = 5) => {
-    _0x342288 = _0x342288.replace(/\s/g, "");
-    let _0x17282b = _0x458c4f(_0x342288);
-    _0x17282b = _0x17282b.split("_")[0];
-    let _0x322114 = {},
-      _0x53b701 = JSON.stringify(_0x322114),
-      _0x44f169 = 12574478,
-      _0x380aa1 = new Date().getTime(),
-      _0x36ae55 = await _0x249dba(_0x17282b + "&" + _0x380aa1 + "&" + _0x44f169 + "&" + _0x53b701, _0x530e17, _0x134594);
-    const _0x8f4c22 = {
-        "Cookie": _0x342288,
-        "User-Agent": _0x5f1259
-      },
-      _0xa72c65 = {
-        "url": "https://shopping.ele.me/h5/mtop.alsc.user.session.ele.check/1.0/?H5Request=true&api=mtop.alsc.user.session.ele.check&appKey=12574478&data={}&dataType=json&jsv=2.6.2&mainDomain=ele.me&pageDomain=ele.me&sign=" + _0x36ae55 + "&subDomain=shopping&t=" + _0x380aa1 + "&timeout=5000&type=json&v=1.0",
-        "method": "GET",
-        "headers": _0x8f4c22
-      };
-    return _0x5bcbae(_0x5df21a => {
-      try {
-        request(_0xa72c65, async (_0x5de87e, _0xea9d8a, _0x52e38f) => {
-          if (!_0x5de87e && _0xea9d8a.statusCode === 200) {
-            const _0x5642d5 = JSON.parse(_0x52e38f);
-            if (_0x5642d5.data.errorCode === "000502") {
-              _0x5df21a(null);
-            } else {
-              _0x1f0d62 <= 0 && (console.log("cookie 存在异常，请确认"), _0x5df21a(null));
-              _0x5642d5.ret.includes("FAIL_SYS_TOKEN_EXOIRED::令牌过期") || _0x5642d5.ret.includes("FAIL_SYS_TOKEN_EMPTY::令牌为空") ? _0x5df21a(await _0x45baa7(_0x342288, _0x530e17, _0x134594, _0x1f0d62 - 1)) : _0x5df21a(_0x342288);
-            }
-          } else {
-            _0x5de87e && _0x5de87e.message.indexOf("Invalid character in header content [\"Cookie\"]") !== -1 ? console.log("被助力账号ck不合法，请确认！！！") : console.log("网络异常");
-            _0x5df21a(null);
-          }
-        });
-      } catch (_0x212307) {
-        console.log(_0xaaf3e8);
-      }
-    });
-  };
-function _0x45baa7(_0x4d5919, _0x51429d, _0x17fede, _0x4f6689 = 5) {
-  const _0x52fc6c = {
-    "url": "https://waimai-guide.ele.me/h5/mtop.alsc.personal.queryminecenter/1.0/?jsv=2.6.2&appKey=12574478",
-    "headers": {}
-  };
-  return _0x52fc6c.headers.Cookie = _0x4d5919, _0x52fc6c.headers.method = "GET", _0x52fc6c.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36", _0x5bcbae(_0xaa8eab => {
-    try {
-      request(_0x52fc6c, async (_0x510fd0, _0x44c56c, _0x3afb43) => {
-        if (!_0x510fd0 && _0x44c56c.statusCode === 200) {
-          const _0x16b05d = JSON.stringify(_0x44c56c.headers["set-cookie"]),
-            _0xf0fac3 = /_m_h5_tk=(\S*);/,
-            _0x11fd2f = _0x16b05d.match(_0xf0fac3)[1],
-            _0x42762c = " _m_h5_tk=" + _0x11fd2f.split(";")[0],
-            _0x325c0f = /_m_h5_tk_enc=(\S*);/,
-            _0x3dd22c = _0x16b05d.match(_0x325c0f)[1],
-            _0x376a23 = " _m_h5_tk_enc=" + _0x3dd22c.split(";")[0];
-          _0x4d5919 = _0xebb331(_0x42762c, _0x376a23, _0x4d5919);
-          if (_0x4f6689 <= 0) {
-            console.log("cookie 存在异常，请确认");
-            _0xaa8eab(null);
-          } else {
-            _0xaa8eab(await _0x115399(_0x4d5919, _0x51429d, _0x17fede, _0x4f6689 - 1));
-          }
-        } else _0xaa8eab(null);
-      });
-    } catch (_0x6a075f) {
-      console.log(_0xaaf3e8);
-    }
-  });
-}
-function _0x51a5e8(_0x38a71a) {
-  return new Promise(_0x23a8bb => {
-    _0x355d3c(_0x38a71a, function (_0x2e6723, _0x5e27ca, _0xa7770b) {
-      if (_0x2e6723) {
-        console.error(_0x2e6723);
-        _0x23a8bb("");
-      } else {
-        _0x23a8bb(_0x5e27ca);
-      }
-    });
-  });
-}
-const _0x53fee8 = async (_0x3b4089, _0xe7b275, _0xfd86f9 = 5) => {},
-  _0x2c412b = async (_0x3634df, _0x119470, _0x195d9f, _0x5e1128 = 5) => {},
-  _0x171be3 = async (_0x5b9a06, _0x392980, _0x354c98 = 5) => {
-    console.log("老表呆瓜为你服务\n");
-  };
-async function _0x5bcbae(_0x50f907) {
-  return new Promise(_0x49398b => {
-    try {
-      _0x50f907(_0x49398b);
-    } catch (_0x48528a) {
-      console.log(_0xaaf3e8);
-      _0x49398b();
-    }
-  });
-}
-function _0x12ee09(_0x2f2c4f) {
-  var _0x37e405 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_",
-    _0xc3e4e = "";
-  for (var _0x586504 = _0x2f2c4f; _0x586504 > 0; --_0x586504) {
-    _0xc3e4e += _0x37e405[Math.floor(Math.random() * _0x37e405.length)];
-  }
-  return _0xc3e4e;
-}
-function _0x316481(_0x33d6b4) {
-  let _0x5e8142 = /^(\S+)=(\S+)$/,
-    _0x4a9c4f = _0x33d6b4.replace(/\s*/g, "").split(";"),
-    _0x16305a = new Map();
-  for (let _0x2e42a7 of _0x4a9c4f) {
-    let _0x1e1595 = _0x5e8142.exec(_0x2e42a7);
-    _0x1e1595 && _0x16305a.set(_0x1e1595[1], _0x1e1595[2]);
-  }
-  return _0x16305a;
-}
-function _0x37e70a(_0x53fd61 = "elmck") {
-  console.log("https://jdche.cf\n");
-  let _0x259eaa = [],
-    _0x1a7808 = process.env[_0x53fd61];
-  return _0x1a7808 && (_0x1a7808.indexOf("&") > -1 ? _0x259eaa = _0x1a7808.split("&") : _0x1a7808.indexOf("\n") > -1 ? _0x259eaa = _0x1a7808.split("\n") : _0x259eaa = [_0x1a7808]), _0x259eaa;
-}
-const _0x4ba1f4 = _0x12b91a => {
-  const _0x14efdb = {
-      "Cookie": _0x12b91a,
-      "user-agent": _0x5f1259
-    },
-    _0x51f532 = {
-      "url": "https://restapi.ele.me/eus/v5/user_detail",
-      "headers": _0x14efdb
+const $ = new Env("掌上金东");
+const notify = $.isNode() ? require("../sendNotify") : "";
+(() => {
+  function b(S) {
+    b = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (V) {
+      return typeof V;
+    } : function (V) {
+      return V && "function" == typeof Symbol && V.constructor === Symbol && V !== Symbol.prototype ? "symbol" : typeof V;
     };
-  return _0x5bcbae(_0x30e556 => {
-    request(_0x51f532, async (_0x19da2e, _0x449694, _0x2ac012) => {
-      if (!_0x19da2e && _0x449694.statusCode === 200) {
-        _0x30e556(JSON.parse(_0x2ac012));
-      } else _0x30e556({});
-    });
-  });
-};
-function _0x10d424(_0xa151e4) {
-  const _0x4fb648 = _0xa151e4.split(";").map(_0xd98055 => _0xd98055.trim().split("=")),
-    _0x5f56b1 = new Map();
-  for (let _0x220d3b = 0; _0x220d3b < _0x4fb648.length; _0x220d3b++) {
-    const [_0x3ae680, _0x523885] = _0x4fb648[_0x220d3b];
-    _0x3ae680 && _0x5f56b1.set(_0x3ae680, decodeURIComponent(_0x523885));
+    return b(S);
   }
-  return _0x5f56b1;
-}
-async function _0x40ed21(_0x4ee4b5, _0x35669f) {
-  const _0xec0f06 = _0x10d424(_0x4ee4b5);
-  !_0xec0f06.has("wxPuid") ? console.log("没有获取到推送 uid，不推送消息\n") : await sendNotify("登录失效通知", "### 通知 \n 备注为：" + _0x35669f + "的饿了么登录已失效，请重新登录", {
-    "uid": _0xec0f06.get("wxPuid")
-  });
-}
-function _0x581038(_0x1009f4, _0xeb7330, _0xc32b71, _0x38a072, _0x3b5f92, _0x13be24, _0x3f67ba, _0x40f704, _0x1706a3) {
-  return new Promise((_0x355d27, _0x2e8f80) => {
-    const _0x3c7756 = {
-        "f": _0x1009f4,
-        "o": _0xeb7330,
-        "e": _0xc32b71,
-        "b": _0x38a072,
-        "n": _0x3b5f92,
-        "y": _0x13be24,
-        "a": _0x3f67ba,
-        "l": _0x40f704,
-        "v": _0x1706a3
+  function c(S, T) {
+    var V = "undefined" != typeof Symbol && S[Symbol.iterator] || S["@@iterator"];
+    if (!V) {
+      if (Array.isArray(S) || (V = g(S)) || T && S && "number" == typeof S.length) {
+        V && (S = V);
+        var W = 0,
+          X = function () {};
+        return {
+          s: X,
+          n: function () {
+            var a2 = {
+              done: !0
+            };
+            return W >= S.length ? a2 : {
+              done: !1,
+              value: S[W++]
+            };
+          },
+          e: function (a2) {
+            throw a2;
+          },
+          f: X
+        };
+      }
+      throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+    }
+    var Y,
+      Z = !0,
+      a0 = !1;
+    return {
+      s: function () {
+        V = V.call(S);
       },
-      _0x4ac259 = {
-        "url": "http://sign.bdwl.asia/getxsign",
-        "method": "POST",
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "body": JSON.stringify(_0x3c7756)
+      n: function () {
+        var a3 = V.next();
+        Z = a3.done;
+        return a3;
+      },
+      e: function (a3) {
+        a0 = !0;
+        Y = a3;
+      },
+      f: function () {
+        try {
+          Z || null == V.return || V.return();
+        } finally {
+          if (a0) {
+            throw Y;
+          }
+        }
+      }
+    };
+  }
+  function d(S, T) {
+    return j(S) || i(S, T) || g(S, T) || f();
+  }
+  function f() {
+    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  function g(S, T) {
+    if (S) {
+      if ("string" == typeof S) {
+        return h(S, T);
+      }
+      var V = {}.toString.call(S).slice(8, -1);
+      "Object" === V && S.constructor && (V = S.constructor.name);
+      return "Map" === V || "Set" === V ? Array.from(S) : "Arguments" === V || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(V) ? h(S, T) : void 0;
+    }
+  }
+  function h(S, T) {
+    (null == T || T > S.length) && (T = S.length);
+    for (var V = 0, W = Array(T); V < T; V++) {
+      W[V] = S[V];
+    }
+    return W;
+  }
+  function i(S, T) {
+    var V = null == S ? null : "undefined" != typeof Symbol && S[Symbol.iterator] || S["@@iterator"];
+    if (null != V) {
+      var W,
+        X,
+        Y,
+        Z,
+        a0 = [],
+        a1 = !0,
+        a2 = !1;
+      try {
+        if (Y = (V = V.call(S)).next, 0 === T) {
+          if (Object(V) !== V) {
+            return;
+          }
+          a1 = !1;
+        } else {
+          for (; !(a1 = (W = Y.call(V)).done) && (a0.push(W.value), a0.length !== T); a1 = !0) {}
+        }
+      } catch (a6) {
+        a2 = !0;
+        X = a6;
+      } finally {
+        try {
+          if (!a1 && null != V.return && (Z = V.return(), Object(Z) !== Z)) {
+            return;
+          }
+        } finally {
+          if (a2) {
+            throw X;
+          }
+        }
+      }
+      return a0;
+    }
+  }
+  function j(S) {
+    if (Array.isArray(S)) {
+      return S;
+    }
+  }
+  function k() {
+    'use strict';
+
+    k = function () {
+      return V;
+    };
+    var U,
+      V = {
+        wrap: a4
+      },
+      W = Object.prototype,
+      X = W.hasOwnProperty,
+      Y = Object.defineProperty || function (aq, ar, as) {
+        aq[ar] = as.value;
+      },
+      Z = "function" == typeof Symbol ? Symbol : {},
+      a0 = Z.iterator || "@@iterator",
+      a1 = Z.asyncIterator || "@@asyncIterator",
+      a2 = Z.toStringTag || "@@toStringTag";
+    function a3(aq, ar, as) {
+      var at = {
+        value: as,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
       };
-    function _0x5e740b(_0x420728, _0x30ef7e, _0x5a714b) {
-      if (!_0x420728 && _0x30ef7e.statusCode == 200) {
-        const _0xe64bd4 = JSON.parse(_0x5a714b);
-        _0xe64bd4 && _0xe64bd4.data ? _0x355d27(_0xe64bd4.data) : _0x2e8f80("请求失败");
-      } else {
-        _0x2e8f80(_0x420728 || _0x5a714b);
+      Object.defineProperty(aq, ar, at);
+      return aq[ar];
+    }
+    try {
+      a3({}, "");
+    } catch (ar) {
+      a3 = function (at, au, av) {
+        return at[au] = av;
+      };
+    }
+    function a4(at, au, av, aw) {
+      var ax = au && au.prototype instanceof ab ? au : ab,
+        ay = Object.create(ax.prototype),
+        az = new ao(aw || []);
+      Y(ay, "_invoke", {
+        value: ak(at, av, az)
+      });
+      return ay;
+    }
+    function a5(at, au, av) {
+      try {
+        return {
+          type: "normal",
+          arg: at.call(au, av)
+        };
+      } catch (aB) {
+        var ay = {
+          type: "throw",
+          arg: aB
+        };
+        return ay;
       }
     }
-    request(_0x4ac259, _0x5e740b);
-  });
-}
-async function _0x5a1592(_0x40ba3c, _0x723a73) {
-  let _0x30ce36 = _0x10d424(_0x40ba3c),
-    _0x49e11e = _0x30ce36.get("deviceId"),
-    _0x318168 = _0x30ce36.get("utdid"),
-    _0x48a51c = _0x30ce36.get("USERID"),
-    _0x10d97c = _0x30ce36.get("token");
-  if (!_0x10d97c) {
-    console.log("未获取到刷新 token，自动续期 ck 失败");
-    return;
-  }
-  let _0x1a80b4 = _0x30ce36.get("umt"),
-    _0x3decaa = "{\"ext\":\"{\\\"apiReferer\\\":\\\"{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}\\\"}\",\"userId\":\"" + _0x48a51c + "\",\"tokenInfo\":\"{\\\"appName\\\":\\\"24895413\\\",\\\"appVersion\\\":\\\"android_11.1.38\\\",\\\"deviceId\\\":\\\"" + _0x49e11e + "\\\",\\\"deviceName\\\":\\\"Android(AOSP on blueline)\\\",\\\"ext\\\":{\\\"aFrom\\\":\\\"{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}{\\\\\\\"errorCode\\\\\\\":\\\\\\\"7\\\\\\\",\\\\\\\"eventName\\\\\\\":\\\\\\\"autologinFailed\\\\\\\"}\\\",\\\"firstLogin\\\":false,\\\"huaweiLogin\\\":false,\\\"pad\\\":false},\\\"locale\\\":\\\"zh_CN\\\",\\\"sdkVersion\\\":\\\"android_5.3.3.4\\\",\\\"site\\\":25,\\\"t\\\":" + new Date().getTime() + ",\\\"token\\\":\\\"" + _0x10d97c + "\\\",\\\"ttid\\\":\\\"1608030065155@eleme_android_11.1.38\\\",\\\"useAcitonType\\\":true,\\\"useDeviceToken\\\":true,\\\"utdid\\\":\\\"\\\"}\",\"riskControlInfo\":\"{\\\"appStore\\\":\\\"1608030065155@eleme_android_11.1.38\\\",\\\"deviceBrand\\\":\\\"Google\\\",\\\"deviceModel\\\":\\\"AOSP on blueline\\\",\\\"deviceName\\\":\\\"AOSP on blueline\\\",\\\"osName\\\":\\\"android\\\",\\\"osVersion\\\":\\\"10\\\",\\\"screenSize\\\":\\\"0x0\\\",\\\"t\\\":\\\"" + new Date().getTime() + "\\\",\\\"umidToken\\\":\\\"" + _0x1a80b4 + "\\\",\\\"wua\\\":\\\"ISdF_FRG6WfAC3hq3tKFPCpwtmaqmW\\/MjsEb3FCZ90ionntxuCdjFDvlua+Gx18Em2WqSYOBg9gNTlOSCM0acYBlAV8E0VCcEwi6n+zfM2sxmYY+klHTup7J6nkn1prMWfeapByu2evAxDr9OduHbFyzkypgAxoUXvGMogXb0UsKdpfaH9CGFJ32hDQlPy+IdRSeI84JQzx8IFErDBo3CBHRH58FvaRwkywNCqNecHwUB+JN9c2casuw1s6KNJHraD2kCFtjaUO2BgDNici2hKwnlLHwvBm+oRSboxE+K\\/HCzXLk3\\/sCpKM8WVg+0+3t4dsh82tlLh2i1V4g5MRJkbZn4c1EoC0ug92R7WUG0Gqs9+0DsyceK03b7Ckh7UozNrXo4\\\"}\"}",
-    _0x16d96e = "com.taobao.mtop.mloginunitservice.autologin",
-    _0x850e8d = "https%3A%2F%2Fr.ele.me%2Fmagic-cube%2F%3FnavType%3D3%26spm%3Da13.b_activity_kb_m71293.0.0%23%2Fgame",
-    _0x14329f = _0x30ce36.get("cookie2"),
-    _0x210630 = _0x30ce36.get("unb"),
-    _0x54d6e6 = await _0x581038(_0x3decaa, _0x16d96e, _0x850e8d, _0x14329f, _0x723a73, _0x210630, _0x49e11e, _0x318168, _0x40ba3c);
-  if (!_0x54d6e6) {
-    return _0x54d6e6;
-  }
-  _0x54d6e6 = JSON.parse(_0x54d6e6.msg);
-  let _0x2e649b = encodeURIComponent(_0x54d6e6["x-sgext"]),
-    _0x19ccc6 = encodeURIComponent(_0x54d6e6["x-sign"]);
-  _0x1a80b4 = encodeURIComponent(_0x54d6e6["x-umt"]);
-  let _0x20bd87 = encodeURIComponent(_0x54d6e6["x-mini-wua"]),
-    _0x32bb8d = _0x54d6e6["x-t"],
-    _0x19c226 = encodeURIComponent(_0x54d6e6.wua),
-    _0x50c5af = {
-      "x-sgext": _0x2e649b,
-      "x-sign": _0x19ccc6,
-      "x-devid": _0x49e11e,
-      "x-pv": "6.3",
-      "x-features": "1051",
-      "x-mini-wua": _0x20bd87,
-      "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
-      "x-t": _0x32bb8d,
-      "x-bx-version": "6.5.90",
-      "f-refer": "mtop",
-      "x-extdata": "openappkey%3DDEFAULT_AUTH",
-      "x-ttid": "1551089129819%40eleme_android_10.14.3",
-      "x-app-ver": "10.14.3",
-      "x-umt": _0x1a80b4,
-      "x-utdid": encodeURIComponent(_0x318168),
-      "x-appkey": "24895413",
-      "x-page-url": _0x850e8d,
-      "Host": "guide-acs.m.taobao.com",
-      "user-agent": "MTOPSDK%2F3.1.1.7+%28Android%3B13%3BGoogle%3BPixel+4+XL%29",
-      "x-sid": _0x14329f,
-      "x-uid": _0x210630,
-      "Cookie": _0x40ba3c,
-      "asac": "2A22C0239QW1FOL3UUQY7U"
-    },
-    _0x2321fe = "https://guide-acs.m.taobao.com/gw/com.taobao.mtop.mloginunitservice.autologin/1.0/?data=" + encodeURIComponent(_0x3decaa) + "&type=originaljson&wua=" + _0x19c226;
-  const _0x4ebca7 = {
-    "method": "POST",
-    "url": _0x2321fe,
-    "headers": _0x50c5af,
-    "body": _0x3decaa
-  };
-  return _0x5bcbae(_0x320c3d => {
-    request(_0x4ebca7, async (_0x2a60d9, _0x54020f, _0x34e603) => {
-      if (!_0x2a60d9 && _0x54020f.statusCode === 200) try {
-        const _0xd8b674 = JSON.parse(_0x34e603);
-        _0x320c3d(_0xd8b674);
-      } catch (_0x309bda) {
-        console.log(_0x309bda);
-        _0x320c3d(null);
-      } else _0x320c3d(null);
+    var a6 = "suspendedStart",
+      a7 = "suspendedYield",
+      a8 = "executing",
+      a9 = "completed",
+      aa = {};
+    function ab() {}
+    function ac() {}
+    function ad() {}
+    var ae = {};
+    a3(ae, a0, function () {
+      return this;
     });
+    var af = Object.getPrototypeOf,
+      ag = af && af(af(ap([])));
+    ag && ag !== W && X.call(ag, a0) && (ae = ag);
+    ad.prototype = ab.prototype = Object.create(ae);
+    var ah = ad.prototype;
+    function ai(at) {
+      ["next", "throw", "return"].forEach(function (av) {
+        a3(at, av, function (aw) {
+          return this._invoke(av, aw);
+        });
+      });
+    }
+    function aj(at, au) {
+      function ay(az, aA, aB, aC) {
+        var aE = a5(at[az], at, aA);
+        if ("throw" !== aE.type) {
+          var aF = aE.arg,
+            aG = aF.value;
+          return aG && "object" == b(aG) && X.call(aG, "__await") ? au.resolve(aG.__await).then(function (aH) {
+            ay("next", aH, aB, aC);
+          }, function (aH) {
+            ay("throw", aH, aB, aC);
+          }) : au.resolve(aG).then(function (aH) {
+            aF.value = aH;
+            aB(aF);
+          }, function (aH) {
+            return ay("throw", aH, aB, aC);
+          });
+        }
+        aC(aE.arg);
+      }
+      var aw;
+      Y(this, "_invoke", {
+        value: function (az, aA) {
+          function aC() {
+            return new au(function (aE, aF) {
+              ay(az, aA, aE, aF);
+            });
+          }
+          return aw = aw ? aw.then(aC, aC) : aC();
+        }
+      });
+    }
+    function ak(at, au, av) {
+      var ax = a6;
+      return function (ay, az) {
+        if (ax === a8) {
+          throw Error("Generator is already running");
+        }
+        if (ax === a9) {
+          if ("throw" === ay) {
+            throw az;
+          }
+          var aB = {
+            value: U,
+            done: !0
+          };
+          return aB;
+        }
+        for (av.method = ay, av.arg = az;;) {
+          var aC = av.delegate;
+          if (aC) {
+            var aD = al(aC, av);
+            if (aD) {
+              if (aD === aa) {
+                continue;
+              }
+              return aD;
+            }
+          }
+          if ("next" === av.method) {
+            av.sent = av._sent = av.arg;
+          } else {
+            if ("throw" === av.method) {
+              if (ax === a6) {
+                throw ax = a9, av.arg;
+              }
+              av.dispatchException(av.arg);
+            } else {
+              "return" === av.method && av.abrupt("return", av.arg);
+            }
+          }
+          ax = a8;
+          var aE = a5(at, au, av);
+          if ("normal" === aE.type) {
+            if (ax = av.done ? a9 : a7, aE.arg === aa) {
+              continue;
+            }
+            var aF = {
+              value: aE.arg,
+              done: av.done
+            };
+            return aF;
+          }
+          "throw" === aE.type && (ax = a9, av.method = "throw", av.arg = aE.arg);
+        }
+      };
+    }
+    function al(at, au) {
+      var aw = au.method,
+        ax = at.iterator[aw];
+      if (ax === U) {
+        au.delegate = null;
+        "throw" === aw && at.iterator.return && (au.method = "return", au.arg = U, al(at, au), "throw" === au.method) || "return" !== aw && (au.method = "throw", au.arg = new TypeError("The iterator does not provide a '" + aw + "' method"));
+        return aa;
+      }
+      var ay = a5(ax, at.iterator, au.arg);
+      if ("throw" === ay.type) {
+        au.method = "throw";
+        au.arg = ay.arg;
+        au.delegate = null;
+        return aa;
+      }
+      var az = ay.arg;
+      return az ? az.done ? (au[at.resultName] = az.value, au.next = at.nextLoc, "return" !== au.method && (au.method = "next", au.arg = U), au.delegate = null, aa) : az : (au.method = "throw", au.arg = new TypeError("iterator result is not an object"), au.delegate = null, aa);
+    }
+    function am(at) {
+      var av = {
+        tryLoc: at[0]
+      };
+      1 in at && (av.catchLoc = at[1]);
+      2 in at && (av.finallyLoc = at[2], av.afterLoc = at[3]);
+      this.tryEntries.push(av);
+    }
+    function an(at) {
+      var au = at.completion || {};
+      au.type = "normal";
+      delete au.arg;
+      at.completion = au;
+    }
+    function ao(at) {
+      var au = {
+        tryLoc: "root"
+      };
+      this.tryEntries = [au];
+      at.forEach(am, this);
+      this.reset(!0);
+    }
+    function ap(at) {
+      if (at || "" === at) {
+        var av = at[a0];
+        if (av) {
+          return av.call(at);
+        }
+        if ("function" == typeof at.next) {
+          return at;
+        }
+        if (!isNaN(at.length)) {
+          var aw = -1,
+            ax = function aA() {
+              for (; ++aw < at.length;) {
+                if (X.call(at, aw)) {
+                  aA.value = at[aw];
+                  aA.done = !1;
+                  return aA;
+                }
+              }
+              aA.value = U;
+              aA.done = !0;
+              return aA;
+            };
+          return ax.next = ax;
+        }
+      }
+      throw new TypeError(b(at) + " is not iterable");
+    }
+    ac.prototype = ad;
+    Y(ah, "constructor", {
+      value: ad,
+      configurable: !0
+    });
+    Y(ad, "constructor", {
+      value: ac,
+      configurable: !0
+    });
+    ac.displayName = a3(ad, a2, "GeneratorFunction");
+    V.isGeneratorFunction = function (at) {
+      var au = "function" == typeof at && at.constructor;
+      return !!au && (au === ac || "GeneratorFunction" === (au.displayName || au.name));
+    };
+    V.mark = function (at) {
+      Object.setPrototypeOf ? Object.setPrototypeOf(at, ad) : (at.__proto__ = ad, a3(at, a2, "GeneratorFunction"));
+      at.prototype = Object.create(ah);
+      return at;
+    };
+    V.awrap = function (at) {
+      var au = {
+        __await: at
+      };
+      return au;
+    };
+    ai(aj.prototype);
+    a3(aj.prototype, a1, function () {
+      return this;
+    });
+    V.AsyncIterator = aj;
+    V.async = function (at, au, av, aw, ax) {
+      void 0 === ax && (ax = Promise);
+      var aA = new aj(a4(at, au, av, aw), ax);
+      return V.isGeneratorFunction(au) ? aA : aA.next().then(function (aB) {
+        return aB.done ? aB.value : aA.next();
+      });
+    };
+    ai(ah);
+    a3(ah, a2, "Generator");
+    a3(ah, a0, function () {
+      return this;
+    });
+    a3(ah, "toString", function () {
+      return "[object Generator]";
+    });
+    V.keys = function (at) {
+      var av = Object(at),
+        aw = [];
+      for (var ax in av) aw.push(ax);
+      aw.reverse();
+      return function az() {
+        for (; aw.length;) {
+          var aA = aw.pop();
+          if (aA in av) {
+            az.value = aA;
+            az.done = !1;
+            return az;
+          }
+        }
+        az.done = !0;
+        return az;
+      };
+    };
+    V.values = ap;
+    ao.prototype = {
+      constructor: ao,
+      reset: function (at) {
+        if (this.prev = 0, this.next = 0, this.sent = this._sent = U, this.done = !1, this.delegate = null, this.method = "next", this.arg = U, this.tryEntries.forEach(an), !at) {
+          for (var av in this) "t" === av.charAt(0) && X.call(this, av) && !isNaN(+av.slice(1)) && (this[av] = U);
+        }
+      },
+      stop: function () {
+        this.done = !0;
+        var at = this.tryEntries[0].completion;
+        if ("throw" === at.type) {
+          throw at.arg;
+        }
+        return this.rval;
+      },
+      dispatchException: function (at) {
+        if (this.done) {
+          throw at;
+        }
+        var av = this;
+        function aC(aD, aE) {
+          ay.type = "throw";
+          ay.arg = at;
+          av.next = aD;
+          aE && (av.method = "next", av.arg = U);
+          return !!aE;
+        }
+        for (var aw = this.tryEntries.length - 1; aw >= 0; --aw) {
+          var ax = this.tryEntries[aw],
+            ay = ax.completion;
+          if ("root" === ax.tryLoc) {
+            return aC("end");
+          }
+          if (ax.tryLoc <= this.prev) {
+            var az = X.call(ax, "catchLoc"),
+              aA = X.call(ax, "finallyLoc");
+            if (az && aA) {
+              if (this.prev < ax.catchLoc) {
+                return aC(ax.catchLoc, !0);
+              }
+              if (this.prev < ax.finallyLoc) {
+                return aC(ax.finallyLoc);
+              }
+            } else {
+              if (az) {
+                if (this.prev < ax.catchLoc) {
+                  return aC(ax.catchLoc, !0);
+                }
+              } else {
+                if (!aA) {
+                  throw Error("try statement without catch or finally");
+                }
+                if (this.prev < ax.finallyLoc) {
+                  return aC(ax.finallyLoc);
+                }
+              }
+            }
+          }
+        }
+      },
+      abrupt: function (at, au) {
+        for (var aw = this.tryEntries.length - 1; aw >= 0; --aw) {
+          var ax = this.tryEntries[aw];
+          if (ax.tryLoc <= this.prev && X.call(ax, "finallyLoc") && this.prev < ax.finallyLoc) {
+            var ay = ax;
+            break;
+          }
+        }
+        ay && ("break" === at || "continue" === at) && ay.tryLoc <= au && au <= ay.finallyLoc && (ay = null);
+        var az = ay ? ay.completion : {};
+        az.type = at;
+        az.arg = au;
+        return ay ? (this.method = "next", this.next = ay.finallyLoc, aa) : this.complete(az);
+      },
+      complete: function (at, au) {
+        if ("throw" === at.type) {
+          throw at.arg;
+        }
+        "break" === at.type || "continue" === at.type ? this.next = at.arg : "return" === at.type ? (this.rval = this.arg = at.arg, this.method = "return", this.next = "end") : "normal" === at.type && au && (this.next = au);
+        return aa;
+      },
+      finish: function (at) {
+        for (var av = this.tryEntries.length - 1; av >= 0; --av) {
+          var aw = this.tryEntries[av];
+          if (aw.finallyLoc === at) {
+            this.complete(aw.completion, aw.afterLoc);
+            an(aw);
+            return aa;
+          }
+        }
+      },
+      catch: function (at) {
+        for (var av = this.tryEntries.length - 1; av >= 0; --av) {
+          var aw = this.tryEntries[av];
+          if (aw.tryLoc === at) {
+            var ax = aw.completion;
+            if ("throw" === ax.type) {
+              var ay = ax.arg;
+              an(aw);
+            }
+            return ay;
+          }
+        }
+        throw Error("illegal catch attempt");
+      },
+      delegateYield: function (at, au, av) {
+        this.delegate = {
+          iterator: ap(at),
+          resultName: au,
+          nextLoc: av
+        };
+        "next" === this.method && (this.arg = U);
+        return aa;
+      }
+    };
+    return V;
+  }
+  function l(S, T, U, V, W, X, Y) {
+    try {
+      var a0 = S[X](Y),
+        a1 = a0.value;
+    } catch (a4) {
+      return void U(a4);
+    }
+    a0.done ? T(a1) : Promise.resolve(a1).then(V, W);
+  }
+  function m(S) {
+    return function () {
+      var U = this,
+        V = arguments;
+      return new Promise(function (W, X) {
+        var Z = S.apply(U, V);
+        function a0(a2) {
+          l(Z, W, X, a0, a1, "next", a2);
+        }
+        function a1(a2) {
+          l(Z, W, X, a0, a1, "throw", a2);
+        }
+        a0(void 0);
+      });
+    };
+  }
+  var n = ($.isNode() ? process.env.ZSJD : $.getdata("ZSJD")) || "",
+    o = ($.isNode() ? process.env.OCR_SERVER : $.getdata("OCR_SERVER")) || "https://ddddocr.xzxxn7.live",
+    p = void 0,
+    q = "",
+    r = "",
+    s = "",
+    t = "",
+    u = "",
+    v = "",
+    w = "",
+    x = "k9o5fc7l6hy2l213",
+    y = "35c782a2";
+  function z() {
+    return A.apply(this, arguments);
+  }
+  function A() {
+    A = m(k().mark(function S() {
+      var V, W, X, Y, Z, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at;
+      return k().wrap(function (au) {
+        for (;;) {
+          switch (au.prev = au.next) {
+            case 0:
+              if (console.log("作者：@xzxxn777\n频道：https://t.me/xzxxn777\n群组：https://t.me/xzxxn7777\n自用机场推荐：https://xn--diqv0fut7b.com\n"), n) {
+                au.next = 6;
+                break;
+              }
+              console.log("先去boxjs填写账号密码");
+              au.next = 5;
+              return Q("先去boxjs填写账号密码");
+            case 5:
+              return au.abrupt("return");
+            case 6:
+              au.next = 8;
+              return O();
+            case 8:
+              p = au.sent;
+              V = n.split(" ");
+              W = c(V);
+              au.prev = 11;
+              W.s();
+            case 13:
+              if ((X = W.n()).done) {
+                au.next = 143;
+                break;
+              }
+              if (Y = X.value, console.log("随机生成device"), Z = M(), t = Z.deviceId, u = Z.model, console.log(t), console.log(u), s = Y.split("&")[0], r = Y.split("&")[1], console.log("用户：".concat(s, "开始任务")), console.log("————————————"), console.log("阅读抽奖"), console.log("获取id"), v) {
+                au.next = 37;
+                break;
+              }
+              au.next = 30;
+              return B("/api/adv/get_adv_float_v1?timestamp=1722742746854&noncestr=ef47f80b74f14f8192cb9ec9725f6439&sign=0270d451eecc93100986e8ee110a42a5");
+            case 30:
+              for (a0 = au.sent, a1 = a0.data[0].link, a2 = a1.split("?")[1], a3 = {}, a4 = a2.split("&"), a5 = 0, a6 = a4.length; a5 < a6; a5++) {
+                a7 = a4[a5].split("=");
+                a3[a7[0]] = a7[1];
+              }
+              v = a3.id;
+            case 37:
+              var aw = {
+                debug: 0,
+                userId: ""
+              };
+              console.log(v);
+              console.log("获取key和token");
+              au.next = 41;
+              return D("/api/member/login", aw);
+            case 41:
+              a8 = au.sent;
+              y = a8.data.key;
+              w = "Bearer " + a8.data.token;
+              console.log(y);
+              console.log(w);
+              console.log("获取抽奖id");
+              au.next = 49;
+              return F("/api/study/detail?id=".concat(v), {
+                id: v
+              });
+            case 49:
+              a9 = au.sent;
+              aa = a9.data.lottery.lottery_id;
+              console.log(aa);
+              console.log("开始阅读");
+              ab = c(a9.data.levels);
+              au.prev = 54;
+              ab.s();
+            case 56:
+              if ((ac = ab.n()).done) {
+                au.next = 87;
+                break;
+              }
+              ad = ac.value;
+              au.next = 60;
+              return F("/api/study/level?id=".concat(ad.id), {
+                id: ad.id
+              });
+            case 60:
+              if (ae = au.sent, console.log(ae.data.level.name), ae.data.level.task_num != ae.data.completedTasks.length) {
+                au.next = 65;
+                break;
+              }
+              console.log("已完成");
+              return au.abrupt("continue", 85);
+            case 65:
+              af = c(ae.data.tasks);
+              au.prev = 66;
+              af.s();
+            case 68:
+              if ((ag = af.n()).done) {
+                au.next = 77;
+                break;
+              }
+              ah = ag.value;
+              console.log("文章：".concat(ah.name));
+              au.next = 73;
+              return D("/api/study/task/complete", {
+                id: ah.id
+              });
+            case 73:
+              ai = au.sent;
+              console.log("完成任务：".concat(ai.message));
+            case 75:
+              au.next = 68;
+              break;
+            case 77:
+              au.next = 82;
+              break;
+            case 79:
+              au.prev = 79;
+              au.t0 = au.catch(66);
+              af.e(au.t0);
+            case 82:
+              au.prev = 82;
+              af.f();
+              return au.finish(82);
+            case 85:
+              au.next = 56;
+              break;
+            case 87:
+              au.next = 92;
+              break;
+            case 89:
+              au.prev = 89;
+              au.t1 = au.catch(54);
+              ab.e(au.t1);
+            case 92:
+              au.prev = 92;
+              ab.f();
+              return au.finish(92);
+            case 95:
+              au.next = 97;
+              return D("/api/lotterybigwheel/_ac_lottery_count", {
+                id: aa,
+                module: "study"
+              });
+            case 97:
+              aj = au.sent;
+              console.log("拥有".concat(aj.data.count, "次抽奖"));
+              ak = 0;
+            case 100:
+              if (!(ak < aj.data.count)) {
+                au.next = 141;
+                break;
+              }
+              au.next = 103;
+              return D("/api/lotterybigwheel/_ac_lottery", {
+                id: aa,
+                app_id: x,
+                module: "study",
+                optionHash: ""
+              });
+            case 103:
+              if (al = au.sent, 10000 != al.code) {
+                au.next = 137;
+                break;
+              }
+              console.log(al.message);
+              au.next = 108;
+              return D("/api/captcha/get", {
+                activity_id: aa,
+                module: "bigWheel"
+              });
+            case 108:
+              am = au.sent;
+              an = am.data.jigsawImageUrl;
+              ao = am.data.originalImageUrl;
+              console.log("滑块：".concat(an));
+              console.log("背景：".concat(ao));
+              ap = am.data.token;
+              aq = am.data.secretKey;
+              console.log("秘钥：".concat(aq));
+              au.next = 118;
+              return H({
+                slidingImage: an,
+                backImage: ao
+              });
+            case 118:
+              if (ar = au.sent, ar) {
+                au.next = 124;
+                break;
+              }
+              console.log("ddddocr服务异常");
+              au.next = 123;
+              return Q("ddddocr服务异常");
+            case 123:
+              return au.abrupt("continue", 138);
+            case 124:
+              console.log(ar);
+              as = J(JSON.stringify({
+                x: ar.result,
+                y: 5
+              }), aq);
+              au.next = 128;
+              return D("/api/captcha/check", {
+                activity_id: aa,
+                module: "bigWheel",
+                cap_token: ap,
+                point: as
+              });
+            case 128:
+              if (at = au.sent, console.log("验证滑块：" + at.message), "操作成功" != at.message) {
+                au.next = 135;
+                break;
+              }
+              au.next = 133;
+              return D("/api/lotterybigwheel/_ac_lottery", {
+                id: aa,
+                app_id: x,
+                module: "study",
+                optionHash: ""
+              });
+            case 133:
+              al = au.sent;
+              al.data.code ? (console.log("抽奖获得：".concat(al.data.title)), q += "用户：".concat(s, " 抽奖获得：").concat(al.data.title, "\n")) : (console.log("抽奖获得：".concat(al.data.tip_title)), q += "用户：".concat(s, " 抽奖获得：").concat(al.data.tip_title, "\n"));
+            case 135:
+              au.next = 138;
+              break;
+            case 137:
+              al.data.code ? (console.log("抽奖获得：".concat(al.data.title)), q += "用户：".concat(s, " 抽奖获得：").concat(al.data.title, "\n")) : (console.log("抽奖获得：".concat(al.data.tip_title)), q += "用户：".concat(s, " 抽奖获得：").concat(al.data.tip_title, "\n"));
+            case 138:
+              ak++;
+              au.next = 100;
+              break;
+            case 141:
+              au.next = 13;
+              break;
+            case 143:
+              au.next = 148;
+              break;
+            case 145:
+              au.prev = 145;
+              au.t2 = au.catch(11);
+              W.e(au.t2);
+            case 148:
+              au.prev = 148;
+              W.f();
+              return au.finish(148);
+            case 151:
+              if (!q) {
+                au.next = 154;
+                break;
+              }
+              au.next = 154;
+              return Q(q);
+            case 154:
+            case "end":
+              return au.stop();
+          }
+        }
+      }, S, null, [[11, 145, 148, 151], [54, 89, 92, 95], [66, 79, 82, 85]]);
+    }));
+    return A.apply(this, arguments);
+  }
+  function B(S) {
+    return C.apply(this, arguments);
+  }
+  function C() {
+    C = m(k().mark(function T(U) {
+      return k().wrap(function (W) {
+        for (;;) {
+          switch (W.prev = W.next) {
+            case 0:
+              return W.abrupt("return", new Promise(function (Y) {
+                var a0 = {
+                  url: "https://mapi.cloud.jinhua.com.cn".concat(U),
+                  headers: {
+                    "x-version": "4.0.5",
+                    appid: "puCJwN2uie5THu6c",
+                    "x-driver-id": t,
+                    "x-phone-models": u,
+                    "x-token": r,
+                    "x-driver-type": "Android 11",
+                    "Accept-Encoding": "gzip",
+                    "user-agent": "Dart/2.18 (dart:io)"
+                  }
+                };
+                $.get(a0, function () {
+                  var a2 = m(k().mark(function a3(a4, a5, a6) {
+                    return k().wrap(function (a8) {
+                      for (;;) {
+                        switch (a8.prev = a8.next) {
+                          case 0:
+                            if (a8.prev = 0, !a4) {
+                              a8.next = 6;
+                              break;
+                            }
+                            console.log("".concat(JSON.stringify(a4)));
+                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
+                            a8.next = 9;
+                            break;
+                          case 6:
+                            a8.next = 8;
+                            return $.wait(2000);
+                          case 8:
+                            Y(JSON.parse(a6));
+                          case 9:
+                            a8.next = 14;
+                            break;
+                          case 11:
+                            a8.prev = 11;
+                            a8.t0 = a8.catch(0);
+                            $.logErr(a8.t0, a5);
+                          case 14:
+                            a8.prev = 14;
+                            Y();
+                            return a8.finish(14);
+                          case 17:
+                          case "end":
+                            return a8.stop();
+                        }
+                      }
+                    }, a3, null, [[0, 11, 14, 17]]);
+                  }));
+                  return function (a4, a5, a6) {
+                    return a2.apply(this, arguments);
+                  };
+                }());
+              }));
+            case 1:
+            case "end":
+              return W.stop();
+          }
+        }
+      }, T);
+    }));
+    return C.apply(this, arguments);
+  }
+  function D(S, T) {
+    return E.apply(this, arguments);
+  }
+  function E() {
+    E = m(k().mark(function T(U, V) {
+      var W;
+      return k().wrap(function (X) {
+        for (;;) {
+          switch (X.prev = X.next) {
+            case 0:
+              W = K(V);
+              return X.abrupt("return", new Promise(function (Z) {
+                var a1 = {
+                  "access-type": "app",
+                  "access-module": "study",
+                  "access-device-id": t,
+                  "access-auth-id": s,
+                  "access-api-signature": W.signature,
+                  "access-nonce-str": W.uuid,
+                  authorization: w,
+                  "access-app-id": x,
+                  "access-timestamp": W.time,
+                  "access-api-token": r,
+                  accept: "application/json, text/plain, */*",
+                  "user-agent": "Mozilla/5.0 (Linux; Android 11; 21091116AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36 JinHua_ZSJD jcy_version:B",
+                  "content-type": "application/json; charset=UTF-8",
+                  origin: "https://op-h5.cloud.jinhua.com.cn",
+                  "x-requested-with": "com.zjonline.zhuji",
+                  "sec-fetch-site": "same-site",
+                  "sec-fetch-mode": "cors",
+                  "sec-fetch-dest": "empty",
+                  referer: "https://op-h5.cloud.jinhua.com.cn/",
+                  "accept-encoding": "gzip, deflate",
+                  "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
+                };
+                var a2 = {
+                  url: "https://op-api.cloud.jinhua.com.cn".concat(U),
+                  headers: a1,
+                  body: JSON.stringify(V)
+                };
+                $.post(a2, function () {
+                  var a4 = m(k().mark(function a5(a6, a7, a8) {
+                    return k().wrap(function (aa) {
+                      for (;;) {
+                        switch (aa.prev = aa.next) {
+                          case 0:
+                            if (aa.prev = 0, !a6) {
+                              aa.next = 6;
+                              break;
+                            }
+                            console.log("".concat(JSON.stringify(a6)));
+                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
+                            aa.next = 9;
+                            break;
+                          case 6:
+                            aa.next = 8;
+                            return $.wait(2000);
+                          case 8:
+                            Z(JSON.parse(a8));
+                          case 9:
+                            aa.next = 14;
+                            break;
+                          case 11:
+                            aa.prev = 11;
+                            aa.t0 = aa.catch(0);
+                            $.logErr(aa.t0, a7);
+                          case 14:
+                            aa.prev = 14;
+                            Z();
+                            return aa.finish(14);
+                          case 17:
+                          case "end":
+                            return aa.stop();
+                        }
+                      }
+                    }, a5, null, [[0, 11, 14, 17]]);
+                  }));
+                  return function (a6, a7, a8) {
+                    return a4.apply(this, arguments);
+                  };
+                }());
+              }));
+            case 2:
+            case "end":
+              return X.stop();
+          }
+        }
+      }, T);
+    }));
+    return E.apply(this, arguments);
+  }
+  function F(S, T) {
+    return G.apply(this, arguments);
+  }
+  function G() {
+    G = m(k().mark(function S(T, U) {
+      var W;
+      return k().wrap(function (X) {
+        for (;;) {
+          switch (X.prev = X.next) {
+            case 0:
+              W = K(U);
+              return X.abrupt("return", new Promise(function (Z) {
+                var a0 = {
+                  url: "https://op-api.cloud.jinhua.com.cn".concat(T),
+                  headers: {
+                    "access-type": "app",
+                    "access-module": "study",
+                    "access-device-id": t,
+                    "access-auth-id": s,
+                    "access-api-signature": W.signature,
+                    "access-nonce-str": W.uuid,
+                    authorization: w,
+                    "access-app-id": x,
+                    "access-timestamp": W.time,
+                    "access-api-token": r,
+                    accept: "application/json, text/plain, */*",
+                    "user-agent": "Mozilla/5.0 (Linux; Android 11; 21091116AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36 JinHua_ZSJD jcy_version:B",
+                    origin: "https://op-h5.cloud.jinhua.com.cn",
+                    "x-requested-with": "com.zjonline.zhuji",
+                    "sec-fetch-site": "same-site",
+                    "sec-fetch-mode": "cors",
+                    "sec-fetch-dest": "empty",
+                    referer: "https://op-h5.cloud.jinhua.com.cn/",
+                    "accept-encoding": "gzip, deflate",
+                    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
+                  }
+                };
+                $.get(a0, function () {
+                  var a2 = m(k().mark(function a3(a4, a5, a6) {
+                    return k().wrap(function (a7) {
+                      for (;;) {
+                        switch (a7.prev = a7.next) {
+                          case 0:
+                            if (a7.prev = 0, !a4) {
+                              a7.next = 6;
+                              break;
+                            }
+                            console.log("".concat(JSON.stringify(a4)));
+                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
+                            a7.next = 9;
+                            break;
+                          case 6:
+                            a7.next = 8;
+                            return $.wait(2000);
+                          case 8:
+                            Z(JSON.parse(a6));
+                          case 9:
+                            a7.next = 14;
+                            break;
+                          case 11:
+                            a7.prev = 11;
+                            a7.t0 = a7.catch(0);
+                            $.logErr(a7.t0, a5);
+                          case 14:
+                            a7.prev = 14;
+                            Z();
+                            return a7.finish(14);
+                          case 17:
+                          case "end":
+                            return a7.stop();
+                        }
+                      }
+                    }, a3, null, [[0, 11, 14, 17]]);
+                  }));
+                  return function (a4, a5, a6) {
+                    return a2.apply(this, arguments);
+                  };
+                }());
+              }));
+            case 2:
+            case "end":
+              return X.stop();
+          }
+        }
+      }, S);
+    }));
+    return G.apply(this, arguments);
+  }
+  function H(S) {
+    return I.apply(this, arguments);
+  }
+  function I() {
+    I = m(k().mark(function T(U) {
+      return k().wrap(function (V) {
+        for (;;) {
+          switch (V.prev = V.next) {
+            case 0:
+              return V.abrupt("return", new Promise(function (X) {
+                var Y = {
+                  url: "".concat(o, "/capcode"),
+                  headers: {
+                    "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify(U)
+                };
+                $.post(Y, function (Z, a0, a1) {
+                  try {
+                    Z ? (console.log("".concat(JSON.stringify(Z))), console.log("".concat($.name, " API请求失败，请检查网路重试"))) : X(JSON.parse(a1));
+                  } catch (a2) {
+                    $.logErr(a2, a0);
+                  } finally {
+                    X();
+                  }
+                });
+              }));
+            case 1:
+            case "end":
+              return V.stop();
+          }
+        }
+      }, T);
+    }));
+    return I.apply(this, arguments);
+  }
+  function J(S, T) {
+    CryptoJS = p.createCryptoJS();
+    var U = CryptoJS.enc.Utf8.parse(T),
+      V = CryptoJS.enc.Utf8.parse(S),
+      W = CryptoJS.AES.encrypt(V, U, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+      });
+    return W.toString();
+  }
+  function K(S) {
+    var V = L(),
+      W = Date.now(),
+      X = {
+        app_id: x,
+        device_id: t,
+        nonce_str: V,
+        source_type: "app",
+        timestamp: W,
+        auth_id: s,
+        token: r
+      };
+    Object.entries(S).forEach(function (a3) {
+      var a4 = d(a3, 2),
+        a5 = a4[0],
+        a6 = a4[1];
+      X[a5] = a6;
+    });
+    var a0 = Object.keys(X).sort(),
+      a1 = a0.map(function (a3) {
+        return "".concat(a3, "=").concat(X[a3]);
+      }).join("&&");
+    a1 = a1 + "&&" + y;
+    CryptoJS = p.createCryptoJS();
+    var Z = CryptoJS.SHA256(a1).toString();
+    var Y = {
+      uuid: V,
+      time: W,
+      signature: Z
+    };
+    return Y;
+  }
+  function L() {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (S) {
+      var T = 16 * Math.random() | 0,
+        U = "x" === S ? T : 3 & T | 8;
+      return U.toString(16);
+    });
+  }
+  function M() {
+    var S = L(),
+      T = "Xiaomi " + N(["M1903F2A", "M2001J2E", "M2001J2C", "M2001J1E", "M2001J1C", "M2002J9E", "M2011K2C", "M2102K1C", "M2101K9C", "2107119DC", "2201123C", "2112123AC", "2201122C", "2211133C", "2210132C", "2304FPN6DC", "23127PN0CC", "24031PN0DC", "23090RA98C", "2312DRA50C", "2312CRAD3C", "2312DRAABC", "22101316UCP", "22101316C"]),
+      U = {
+        model: T,
+        deviceId: S
+      };
+    return U;
+  }
+  function N(S) {
+    return S[Math.floor(Math.random() * S.length)];
+  }
+  function O() {
+    return P.apply(this, arguments);
+  }
+  function P() {
+    P = m(k().mark(function T() {
+      var V;
+      return k().wrap(function W(X) {
+        for (;;) {
+          switch (X.prev = X.next) {
+            case 0:
+              if (V = $.getdata("Utils_Code") || "", !V || !Object.keys(V).length) {
+                X.next = 5;
+                break;
+              }
+              console.log("✅ ".concat($.name, ": 缓存中存在Utils代码, 跳过下载"));
+              eval(V);
+              return X.abrupt("return", creatUtils());
+            case 5:
+              console.log("🚀 ".concat($.name, ": 开始下载Utils代码"));
+              return X.abrupt("return", new Promise(function () {
+                var Z = m(k().mark(function a0(a1) {
+                  return k().wrap(function a4(a5) {
+                    for (;;) {
+                      switch (a5.prev = a5.next) {
+                        case 0:
+                          $.getScript("https://mirror.ghproxy.com/https://raw.githubusercontent.com/xzxxn777/Surge/main/Utils/Utils.js").then(function (a7) {
+                            $.setdata(a7, "Utils_Code");
+                            eval(a7);
+                            console.log("✅ Utils加载成功, 请继续");
+                            a1(creatUtils());
+                          });
+                        case 1:
+                        case "end":
+                          return a5.stop();
+                      }
+                    }
+                  }, a0);
+                }));
+                return function (a1) {
+                  return Z.apply(this, arguments);
+                };
+              }()));
+            case 7:
+            case "end":
+              return X.stop();
+          }
+        }
+      }, T);
+    }));
+    return P.apply(this, arguments);
+  }
+  function Q(S) {
+    return R.apply(this, arguments);
+  }
+  function R() {
+    R = m(k().mark(function T(U) {
+      return k().wrap(function (V) {
+        for (;;) {
+          switch (V.prev = V.next) {
+            case 0:
+              if (!$.isNode()) {
+                V.next = 5;
+                break;
+              }
+              V.next = 3;
+              return notify.sendNotify($.name, U);
+            case 3:
+              V.next = 6;
+              break;
+            case 5:
+              $.msg($.name, "", U);
+            case 6:
+            case "end":
+              return V.stop();
+          }
+        }
+      }, T);
+    }));
+    return R.apply(this, arguments);
+  }
+  m(k().mark(function S() {
+    return k().wrap(function (T) {
+      for (;;) {
+        switch (T.prev = T.next) {
+          case 0:
+            T.next = 2;
+            return z();
+          case 2:
+          case "end":
+            return T.stop();
+        }
+      }
+    }, S);
+  }))().catch(function (T) {
+    $.log(T);
+  }).finally(function () {
+    $.done({});
   });
+})();
+function Env(t, e) {
+  class s {
+    constructor(t) {
+      this.env = t;
+    }
+    send(t, e = "GET") {
+      t = "string" == typeof t ? {
+        url: t
+      } : t;
+      let s = this.get;
+      "POST" === e && (s = this.post);
+      return new Promise((e, i) => {
+        s.call(this, t, (t, s, o) => {
+          t ? i(t) : e(s);
+        });
+      });
+    }
+    get(t) {
+      return this.send.call(this.env, t);
+    }
+    post(t) {
+      return this.send.call(this.env, t, "POST");
+    }
+  }
+  return new class {
+    constructor(t, e) {
+      this.logLevels = {
+        debug: 0,
+        info: 1,
+        warn: 2,
+        error: 3
+      };
+      this.logLevelPrefixs = {
+        debug: "[DEBUG] ",
+        info: "[INFO] ",
+        warn: "[WARN] ",
+        error: "[ERROR] "
+      };
+      this.logLevel = "info";
+      this.name = t;
+      this.http = new s(this);
+      this.data = null;
+      this.dataFile = "box.dat";
+      this.logs = [];
+      this.isMute = !1;
+      this.isNeedRewrite = !1;
+      this.logSeparator = "\n";
+      this.encoding = "utf-8";
+      this.startTime = new Date().getTime();
+      Object.assign(this, e);
+      this.log("", `🔔${this.name}, 开始!`);
+    }
+    getEnv() {
+      return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : void 0;
+    }
+    isNode() {
+      return "Node.js" === this.getEnv();
+    }
+    isQuanX() {
+      return "Quantumult X" === this.getEnv();
+    }
+    isSurge() {
+      return "Surge" === this.getEnv();
+    }
+    isLoon() {
+      return "Loon" === this.getEnv();
+    }
+    isShadowrocket() {
+      return "Shadowrocket" === this.getEnv();
+    }
+    isStash() {
+      return "Stash" === this.getEnv();
+    }
+    toObj(t, e = null) {
+      try {
+        return JSON.parse(t);
+      } catch {
+        return e;
+      }
+    }
+    toStr(t, e = null, ...s) {
+      try {
+        return JSON.stringify(t, ...s);
+      } catch {
+        return e;
+      }
+    }
+    getjson(t, e) {
+      let s = e;
+      if (this.getdata(t)) {
+        try {
+          s = JSON.parse(this.getdata(t));
+        } catch {}
+      }
+      return s;
+    }
+    setjson(t, e) {
+      try {
+        return this.setdata(JSON.stringify(t), e);
+      } catch {
+        return !1;
+      }
+    }
+    getScript(t) {
+      return new Promise(e => {
+        this.get({
+          url: t
+        }, (t, s, i) => e(i));
+      });
+    }
+    runScript(t, e) {
+      return new Promise(s => {
+        let i = this.getdata("@chavy_boxjs_userCfgs.httpapi");
+        i = i ? i.replace(/\n/g, "").trim() : i;
+        let o = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
+        o = o ? 1 * o : 20;
+        o = e && e.timeout ? e.timeout : o;
+        const [r, a] = i.split("@"),
+          n = {
+            url: `http://${a}/v1/scripting/evaluate`,
+            body: {
+              script_text: t,
+              mock_type: "cron",
+              timeout: o
+            },
+            headers: {
+              "X-Key": r,
+              Accept: "*/*"
+            },
+            timeout: o
+          };
+        this.post(n, (t, e, i) => s(i));
+      }).catch(t => this.logErr(t));
+    }
+    loaddata() {
+      if (!this.isNode()) {
+        return {};
+      }
+      {
+        this.fs = this.fs ? this.fs : require("fs");
+        this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile),
+          e = this.path.resolve(process.cwd(), this.dataFile),
+          s = this.fs.existsSync(t),
+          i = !s && this.fs.existsSync(e);
+        if (!s && !i) {
+          return {};
+        }
+        {
+          const i = s ? t : e;
+          try {
+            return JSON.parse(this.fs.readFileSync(i));
+          } catch (t) {
+            return {};
+          }
+        }
+      }
+    }
+    writedata() {
+      if (this.isNode()) {
+        this.fs = this.fs ? this.fs : require("fs");
+        this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile),
+          e = this.path.resolve(process.cwd(), this.dataFile),
+          s = this.fs.existsSync(t),
+          i = !s && this.fs.existsSync(e),
+          o = JSON.stringify(this.data);
+        s ? this.fs.writeFileSync(t, o) : i ? this.fs.writeFileSync(e, o) : this.fs.writeFileSync(t, o);
+      }
+    }
+    lodash_get(t, e, s) {
+      const i = e.replace(/\[(\d+)\]/g, ".$1").split(".");
+      let o = t;
+      for (const t of i) if (o = Object(o)[t], void 0 === o) {
+        return s;
+      }
+      return o;
+    }
+    lodash_set(t, e, s) {
+      Object(t) !== t || (Array.isArray(e) || (e = e.toString().match(/[^.[\]]+/g) || []), e.slice(0, -1).reduce((t, s, i) => Object(t[s]) === t[s] ? t[s] : t[s] = Math.abs(e[i + 1]) >> 0 == +e[i + 1] ? [] : {}, t)[e[e.length - 1]] = s);
+      return t;
+    }
+    getdata(t) {
+      let e = this.getval(t);
+      if (/^@/.test(t)) {
+        const [, s, i] = /^@(.*?)\.(.*?)$/.exec(t),
+          o = s ? this.getval(s) : "";
+        if (o) {
+          try {
+            const t = JSON.parse(o);
+            e = t ? this.lodash_get(t, i, "") : e;
+          } catch (t) {
+            e = "";
+          }
+        }
+      }
+      return e;
+    }
+    setdata(t, e) {
+      let s = !1;
+      if (/^@/.test(e)) {
+        const [, i, o] = /^@(.*?)\.(.*?)$/.exec(e),
+          r = this.getval(i),
+          a = i ? "null" === r ? null : r || "{}" : "{}";
+        try {
+          const e = JSON.parse(a);
+          this.lodash_set(e, o, t);
+          s = this.setval(JSON.stringify(e), i);
+        } catch (e) {
+          const r = {};
+          this.lodash_set(r, o, t);
+          s = this.setval(JSON.stringify(r), i);
+        }
+      } else {
+        s = this.setval(t, e);
+      }
+      return s;
+    }
+    getval(t) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+          return $persistentStore.read(t);
+        case "Quantumult X":
+          return $prefs.valueForKey(t);
+        case "Node.js":
+          this.data = this.loaddata();
+          return this.data[t];
+        default:
+          return this.data && this.data[t] || null;
+      }
+    }
+    setval(t, e) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+          return $persistentStore.write(t, e);
+        case "Quantumult X":
+          return $prefs.setValueForKey(t, e);
+        case "Node.js":
+          this.data = this.loaddata();
+          this.data[e] = t;
+          this.writedata();
+          return !0;
+        default:
+          return this.data && this.data[e] || null;
+      }
+    }
+    initGotEnv(t) {
+      this.got = this.got ? this.got : require("got");
+      this.cktough = this.cktough ? this.cktough : require("tough-cookie");
+      this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar();
+      t && (t.headers = t.headers ? t.headers : {}, t && (t.headers = t.headers ? t.headers : {}, void 0 === t.headers.cookie && void 0 === t.headers.Cookie && void 0 === t.cookieJar && (t.cookieJar = this.ckjar)));
+    }
+    get(t, e = () => {}) {
+      switch (t.headers && (delete t.headers["Content-Type"], delete t.headers["Content-Length"], delete t.headers["content-type"], delete t.headers["content-length"]), t.params && (t.url += "?" + this.queryStr(t.params)), void 0 === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = !1), this.isQuanX() && (t.opts ? t.opts.redirection = !1 : t.opts = {
+        redirection: !1
+      })), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        default:
+          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+            "X-Surge-Skip-Scripting": !1
+          }));
+          $httpClient.get(t, (t, s, i) => {
+            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
+            e(t, s, i);
+          });
+          break;
+        case "Quantumult X":
+          this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+            hints: !1
+          }));
+          $task.fetch(t).then(t => {
+            const {
+              statusCode: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            } = t;
+            e(null, {
+              status: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            }, r, a);
+          }, t => e(t && t.error || "UndefinedError"));
+          break;
+        case "Node.js":
+          let s = require("iconv-lite");
+          this.initGotEnv(t);
+          this.got(t).on("redirect", (t, e) => {
+            try {
+              if (t.headers["set-cookie"]) {
+                const s = t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
+                s && this.ckjar.setCookieSync(s, null);
+                e.cookieJar = this.ckjar;
+              }
+            } catch (t) {
+              this.logErr(t);
+            }
+          }).then(t => {
+            const {
+                statusCode: i,
+                statusCode: o,
+                headers: r,
+                rawBody: a
+              } = t,
+              n = s.decode(a, this.encoding);
+            e(null, {
+              status: i,
+              statusCode: o,
+              headers: r,
+              rawBody: a,
+              body: n
+            }, n);
+          }, t => {
+            const {
+              message: i,
+              response: o
+            } = t;
+            e(i, o, o && s.decode(o.rawBody, this.encoding));
+          });
+          break;
+      }
+    }
+    post(t, e = () => {}) {
+      const s = t.method ? t.method.toLocaleLowerCase() : "post";
+      switch (t.body && t.headers && !t.headers["Content-Type"] && !t.headers["content-type"] && (t.headers["content-type"] = "application/x-www-form-urlencoded"), t.headers && (delete t.headers["Content-Length"], delete t.headers["content-length"]), void 0 === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = !1), this.isQuanX() && (t.opts ? t.opts.redirection = !1 : t.opts = {
+        redirection: !1
+      })), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        default:
+          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+            "X-Surge-Skip-Scripting": !1
+          }));
+          $httpClient[s](t, (t, s, i) => {
+            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
+            e(t, s, i);
+          });
+          break;
+        case "Quantumult X":
+          t.method = s;
+          this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+            hints: !1
+          }));
+          $task.fetch(t).then(t => {
+            const {
+              statusCode: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            } = t;
+            e(null, {
+              status: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            }, r, a);
+          }, t => e(t && t.error || "UndefinedError"));
+          break;
+        case "Node.js":
+          let i = require("iconv-lite");
+          this.initGotEnv(t);
+          const {
+            url: o,
+            ...r
+          } = t;
+          this.got[s](o, r).then(t => {
+            const {
+                statusCode: s,
+                statusCode: o,
+                headers: r,
+                rawBody: a
+              } = t,
+              n = i.decode(a, this.encoding);
+            e(null, {
+              status: s,
+              statusCode: o,
+              headers: r,
+              rawBody: a,
+              body: n
+            }, n);
+          }, t => {
+            const {
+              message: s,
+              response: o
+            } = t;
+            e(s, o, o && i.decode(o.rawBody, this.encoding));
+          });
+          break;
+      }
+    }
+    time(t, e = null) {
+      const s = e ? new Date(e) : new Date();
+      let i = {
+        "M+": s.getMonth() + 1,
+        "d+": s.getDate(),
+        "H+": s.getHours(),
+        "m+": s.getMinutes(),
+        "s+": s.getSeconds(),
+        "q+": Math.floor((s.getMonth() + 3) / 3),
+        S: s.getMilliseconds()
+      };
+      /(y+)/.test(t) && (t = t.replace(RegExp.$1, (s.getFullYear() + "").substr(4 - RegExp.$1.length)));
+      for (let e in i) new RegExp("(" + e + ")").test(t) && (t = t.replace(RegExp.$1, 1 == RegExp.$1.length ? i[e] : ("00" + i[e]).substr(("" + i[e]).length)));
+      return t;
+    }
+    queryStr(t) {
+      let e = "";
+      for (const s in t) {
+        let i = t[s];
+        null != i && "" !== i && ("object" == typeof i && (i = JSON.stringify(i)), e += `${s}=${i}&`);
+      }
+      e = e.substring(0, e.length - 1);
+      return e;
+    }
+    msg(e = t, s = "", i = "", o = {}) {
+      const r = t => {
+        const {
+          $open: e,
+          $copy: s,
+          $media: i,
+          $mediaMime: o
+        } = t;
+        switch (typeof t) {
+          case void 0:
+            return t;
+          case "string":
+            switch (this.getEnv()) {
+              case "Surge":
+              case "Stash":
+              default:
+                return {
+                  url: t
+                };
+              case "Loon":
+              case "Shadowrocket":
+                return t;
+              case "Quantumult X":
+                return {
+                  "open-url": t
+                };
+              case "Node.js":
+                return;
+            }
+          case "object":
+            switch (this.getEnv()) {
+              case "Surge":
+              case "Stash":
+              case "Shadowrocket":
+              default:
+                {
+                  const r = {};
+                  let a = t.openUrl || t.url || t["open-url"] || e;
+                  a && Object.assign(r, {
+                    action: "open-url",
+                    url: a
+                  });
+                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                  if (n && Object.assign(r, {
+                    action: "clipboard",
+                    text: n
+                  }), i) {
+                    let t, e, s;
+                    if (i.startsWith("http")) {
+                      t = i;
+                    } else {
+                      if (i.startsWith("data:")) {
+                        const [t] = i.split(";"),
+                          [, o] = i.split(",");
+                        e = o;
+                        s = t.replace("data:", "");
+                      } else {
+                        e = i;
+                        s = (t => {
+                          const e = {
+                            JVBERi0: "application/pdf",
+                            R0lGODdh: "image/gif",
+                            R0lGODlh: "image/gif",
+                            iVBORw0KGgo: "image/png",
+                            "/9j/": "image/jpg"
+                          };
+                          for (var s in e) if (0 === t.indexOf(s)) {
+                            return e[s];
+                          }
+                          return null;
+                        })(i);
+                      }
+                    }
+                    Object.assign(r, {
+                      "media-url": t,
+                      "media-base64": e,
+                      "media-base64-mime": o ?? s
+                    });
+                  }
+                  Object.assign(r, {
+                    "auto-dismiss": t["auto-dismiss"],
+                    sound: t.sound
+                  });
+                  return r;
+                }
+              case "Loon":
+                {
+                  const s = {};
+                  let o = t.openUrl || t.url || t["open-url"] || e;
+                  o && Object.assign(s, {
+                    openUrl: o
+                  });
+                  let r = t.mediaUrl || t["media-url"];
+                  i?.startsWith("http") && (r = i);
+                  r && Object.assign(s, {
+                    mediaUrl: r
+                  });
+                  console.log(JSON.stringify(s));
+                  return s;
+                }
+              case "Quantumult X":
+                {
+                  const o = {};
+                  let r = t["open-url"] || t.url || t.openUrl || e;
+                  r && Object.assign(o, {
+                    "open-url": r
+                  });
+                  let a = t["media-url"] || t.mediaUrl;
+                  i?.startsWith("http") && (a = i);
+                  a && Object.assign(o, {
+                    "media-url": a
+                  });
+                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                  n && Object.assign(o, {
+                    "update-pasteboard": n
+                  });
+                  console.log(JSON.stringify(o));
+                  return o;
+                }
+              case "Node.js":
+                return;
+            }
+          default:
+            return;
+        }
+      };
+      if (!this.isMute) {
+        switch (this.getEnv()) {
+          case "Surge":
+          case "Loon":
+          case "Stash":
+          case "Shadowrocket":
+          default:
+            $notification.post(e, s, i, r(o));
+            break;
+          case "Quantumult X":
+            $notify(e, s, i, r(o));
+            break;
+          case "Node.js":
+            break;
+        }
+      }
+      if (!this.isMuteLog) {
+        let t = ["", "==============📣系统通知📣=============="];
+        t.push(e);
+        s && t.push(s);
+        i && t.push(i);
+        console.log(t.join("\n"));
+        this.logs = this.logs.concat(t);
+      }
+    }
+    debug(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.debug && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.debug}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    info(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.info && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.info}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    warn(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.warn && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.warn}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    error(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.error && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.error}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    log(...t) {
+      t.length > 0 && (this.logs = [...this.logs, ...t]);
+      console.log(t.map(t => t ?? String(t)).join(this.logSeparator));
+    }
+    logErr(t, e) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        case "Quantumult X":
+        default:
+          this.log("", `❗️${this.name}, 错误!`, e, t);
+          break;
+        case "Node.js":
+          this.log("", `❗️${this.name}, 错误!`, e, void 0 !== t.message ? t.message : t, t.stack);
+          break;
+      }
+    }
+    wait(t) {
+      return new Promise(e => setTimeout(e, t));
+    }
+    done(t = {}) {
+      const e = (new Date().getTime() - this.startTime) / 1000;
+      switch (this.log("", `🔔${this.name}, 结束! 🕛 ${e} 秒`), this.log(), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        case "Quantumult X":
+        default:
+          $done(t);
+          break;
+        case "Node.js":
+          process.exit(1);
+      }
+    }
+  }(t, e);
 }
-const _0x1aab37 = {
-  "checkCk": _0x539aac,
-  "User_Agent": _0x5f1259,
-  "getToken": _0x458c4f,
-  "sign": _0x249dba,
-  "wait": _0x5d2ff1,
-  "validateCarmeWithType": _0x171be3,
-  "randomString": _0x12ee09,
-  "getCookies": _0x37e70a,
-  "getUserInfo": _0x4ba1f4,
-  "validateCarmeNoCon": _0x53fee8,
-  "getCookieMap": _0x10d424,
-  "invalidCookieNotify": _0x40ed21,
-  "checkCarmeCount": _0x2c412b,
-  "tryCatchPromise": _0x5bcbae,
-  "checkMasterCk": _0x115399,
-  "couponNotify": _0x5670f4,
-  "runOne": _0x5a1592,
-  "newSign": _0x2f0cce
-};
-module.exports = _0x1aab37;
-_0xodg = "jsjiami.com.v6";
